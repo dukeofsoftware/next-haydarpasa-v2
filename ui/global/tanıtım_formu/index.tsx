@@ -3,6 +3,7 @@ import { useState, ChangeEvent, SyntheticEvent } from "react";
 import Loading from "@/ui/global/loading";
 import Input from "@/ui/global/form_elements/Input";
 import Label from '@/ui/global/form_elements/Label';
+import  ContainerComp  from '@/ui/global/Container';
 
 
 function TanıtımFormu() {
@@ -49,8 +50,8 @@ function TanıtımFormu() {
     setCheck(true)
   }
   return (
-    <section className="px-[3%] sm:px-[5%] md:px-[7%] lg:px-[10%] bg-white">
-      <h1 className="text-xl font-bold text-primary mb-5">Tanıtım Başvurusu</h1>
+    <ContainerComp classNames="my-[5rem]">
+      <h1 className="text-xl font-bold text-primary-3 mb-5">Tanıtım Başvurusu</h1>
       {isLoading && <Loading />}
       {check && <h1 className="text-lg font-bold text-blue-600">Form başarıyla gönderildi!</h1>}
       {error && <h1 className="text-xl text-red-600">Bir hata oluştu...</h1>}
@@ -61,7 +62,7 @@ function TanıtımFormu() {
             <Input name="tamAd" id="tamAd" type="text" updateInput={updateInput} value={state.tamAd} placeholder="Sena" required={true} />
          
           </div>
-          <div className="mb-6">
+          <div className="mb-2">
             <Label htmlFor="mail">Email</Label>
           <Input name="mail" id="mail" type="email" updateInput={updateInput} value={state.mail} placeholder="example@gmail.com" required={true} />
      
@@ -77,13 +78,9 @@ function TanıtımFormu() {
 
 
         </div>
+        <Label htmlFor="mesaj">Mesajınız</Label>
 
-        <label
-          htmlFor="mesaj"
-          className="block mb-2 text-sm font-bold text-gray-900 dark:text-white"
-        >
-          Mesajınız
-        </label>
+      
         <textarea
           id="mesaj"
           value={state.mesaj}
@@ -101,7 +98,7 @@ function TanıtımFormu() {
           Gönder
         </button>
       </form>}
-    </section>
+    </ContainerComp>
   );
 }
 
