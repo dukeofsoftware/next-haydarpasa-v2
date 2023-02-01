@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Event {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  content   String
+  imageURL  String
+  logoAlt   String
+  logoURL   String
+  dateTime      DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  content   String
+  imageURL  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model Tanitim {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  tamAd     String
+  mail      String
+  telefon   String
+  mesaj     String?
+  createdAt DateTime @default(now())
+}
+
+model Cizerge {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  ders      String
+  giris String
+  cikis String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+
+.accordion{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms ease;
+}
+.accordionactive{
+    grid-template-rows: 1fr;
+}
