@@ -1,4 +1,6 @@
-import { FaBeer } from 'react-icons/fa';
+import { FaBeer ,FaUserFriends} from 'react-icons/fa';
+import {BiNews,BiTimeFive} from 'react-icons/bi';
+import { BsCalendarEventFill } from 'react-icons/bs';
 
 export const sidebarLinks = [
     {
@@ -7,24 +9,20 @@ export const sidebarLinks = [
         icon: <FaBeer/>,
     },
     {
-        title: 'Dashboard',
+        title: 'Haberler',
         href: '/dashboard/haberler',
-        icon: <FaBeer/>,
+        icon: <BiNews/>,
     },
     {
-        title: 'Dashboard',
+        title: 'Etkinlikler',
         href: '/dashboard/etkinlikler',
-        icon: <FaBeer/>,
+        icon: <BsCalendarEventFill/>,
     },
+
     {
-        title: 'Dashboard',
-        href: '/dashboard/',
-        icon: <FaBeer/>,
-    },
-    {
-        title: 'Dashboard',
-        href: '/dashboard/cizerge/tanitim',
-        icon: <FaBeer/>,
+        title: 'Tanitim',
+        href: '/dashboard/tanitim',
+        icon: <FaUserFriends/>,
     },
     
 ]
