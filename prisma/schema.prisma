@@ -17,7 +17,7 @@ model Event {
   imageURL  String
   logoAlt   String
   logoURL   String
-  dateTime      DateTime
+  dateTime  DateTime
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -31,7 +31,6 @@ model Post {
   updatedAt DateTime @updatedAt
 }
 
-
 model Tanitim {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   tamAd     String
@@ -41,17 +40,9 @@ model Tanitim {
   createdAt DateTime @default(now())
 }
 
-model Cizerge {
+model Admin {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  ders      String
-  giris String
-  cikis String
+  email  String
+  password  String
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 }
-
-
-
-
-
-
