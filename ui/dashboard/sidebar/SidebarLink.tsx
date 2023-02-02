@@ -19,7 +19,7 @@ const SidebarLink = ({ href, title, icon }: SidebarLinkProps) => {
         <Link href={href} className="flex items-center ml-[4%] gap-4 px-3 py-4 rounded-full hover:bg-primary-2 duration-200">
             {icon}
 
-            <h3 className={`text-xl text-primary-1 hover:text-primary-3 duration-300 ${isActive && "text-blue-600"}`}>
+            <h3 className={`text-xl text-primary-1 hover:text-primary-3/50 duration-300 ${isActive && "text-blue-600"}`}>
                 {title}</h3>
         </Link>
     )
