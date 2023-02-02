@@ -1,6 +1,7 @@
 import { getTanıtımById, deleteTanıtımById } from 'lib/prisma/tanıtım';
 
 const handler = async (req, res) => {
+  if (req.query.secret !== process.env.SECRET_TOKEN) return res.status(401).json({message:"Invalid Token"})
   const { id } = req.query;
   if (req.method === 'GET') {
     try {

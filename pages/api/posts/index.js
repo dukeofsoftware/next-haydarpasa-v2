@@ -5,6 +5,8 @@ import {
   updatePostById,
 } from 'lib/prisma/news';
 const handler = async (req, res) => {
+  if (req.query.secret !== process.env.SECRET_TOKEN) return res.status(401).json({message:"Invalid Token"})
+
   if (req.method === 'GET') {
     try {
       const { posts, error } = await getPosts();

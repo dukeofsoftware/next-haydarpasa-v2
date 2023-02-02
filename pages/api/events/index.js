@@ -1,5 +1,6 @@
 import { createEvent, getEvents } from '@/lib/prisma/events';
 const handler = async (req, res) => {
+  if (req.query.secret !== process.env.SECRET_TOKEN) return res.status(401).json({message:"Invalid Token"})
   if (req.method === 'GET') {
     try {
       const { events, error } = await getEvents();
