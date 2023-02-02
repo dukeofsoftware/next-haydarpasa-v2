@@ -10,6 +10,7 @@
       "@/assets/*": ["assets/*"],
       "@/constants/*": ["constants/*"],
       "@/types/*": ["types/*"],
+      "@/utils/*": ["utils/*"],
       
     },
     "target": "es5",
@@ -33,6 +34,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "constants/kulupler.ts","./global-types.d.ts", "pages/api/auth/[...nextauth].js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "constants/kulupler.ts","./global-types.d.ts", "pages/api/auth/[...nextauth].ts"],
   "exclude": ["node_modules"]
 }
