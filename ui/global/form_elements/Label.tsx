@@ -7,8 +7,8 @@ interface LabelProps {
 const Label = ({htmlFor,classNames,children}:LabelProps) => {
   return (
     <label
-    htmlFor="mail"
-    className={`block mb-2 text-primary-3 text-sm font-bold text-gray-900 ${classNames}}`}
+    htmlFor={htmlFor}
+    className={`block mb-2 text-primary-3 text-sm font-bold  ${classNames}}`}
   >
     {children}
   </label>  )
