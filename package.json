@@ -14,7 +14,6 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@next-auth/prisma-adapter": "1.0.5",
     "@tailwindcss/line-clamp": "0.4.2",
     "chart.js": "4.2.0",
     "date-fns": "2.29.3",
@@ -27,7 +26,6 @@
     "react-dom": "18.2.0",
     "react-icons": "4.7.1",
     "react-iframe": "1.8.5",
-    "react-table": "7.8.0",
     "sharp": "0.31.3"
   },
   "devDependencies": {
