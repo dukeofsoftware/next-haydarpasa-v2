@@ -1,15 +1,13 @@
-
-import Link from 'next/link'
+import Link from 'next/link';
 interface TanıtımProps {
   tanitims: any;
 }
 function Tanıtım({ tanitims }: TanıtımProps) {
   return (
-    <section className="overflow-x-auto relative shadow-md sm:rounded-lg">
-      <table className=" text-sm text-left text-gray-500 table-fixed ">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
+    <section className="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table className=" table-fixed text-left text-sm text-gray-500 ">
+        <thead className="bg-gray-50 text-xs uppercase text-gray-700 ">
           <tr>
-
             <th scope="col" className="py-3 px-6">
               Tam Ad
             </th>
@@ -29,11 +27,20 @@ function Tanıtım({ tanitims }: TanıtımProps) {
         </thead>
         <tbody>
           {tanitims.map((tanitim: any) => (
-            <tr key={tanitim?.id} className="bg-white border-b   hover:bg-gray-50 ">
-              <td className="py-4 px-6 overflow-hidden">{tanitim?.tamAd}</td>
-              <td className="py-4 px-6 overflow-hidden text-ellipsis whitespace-nowrap">{tanitim?.mail}</td>
-              <td className="py-4 px-6 overflow-hidden text-ellipsis whitespace-nowrap">{tanitim?.telefon}</td>
-              <td className="py-4 px-6 overflow-hidden text-ellipsis whitespace-nowrap">{tanitim?.mesaj}</td>
+            <tr
+              key={tanitim?.id}
+              className="border-b bg-white   hover:bg-gray-50 "
+            >
+              <td className="overflow-hidden py-4 px-6">{tanitim?.tamAd}</td>
+              <td className="overflow-hidden text-ellipsis whitespace-nowrap py-4 px-6">
+                {tanitim?.mail}
+              </td>
+              <td className="overflow-hidden text-ellipsis whitespace-nowrap py-4 px-6">
+                {tanitim?.telefon}
+              </td>
+              <td className="overflow-hidden text-ellipsis whitespace-nowrap py-4 px-6">
+                {tanitim?.mesaj}
+              </td>
               <td className="py-4 px-6 text-right">
                 <Link
                   href={`dashboard/tanitim/${tanitim?.id}`}
@@ -48,6 +55,6 @@ function Tanıtım({ tanitims }: TanıtımProps) {
         </tbody>
       </table>
     </section>
-  )
+  );
 }
-export default Tanıtım
+export default Tanıtım;
