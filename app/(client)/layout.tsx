@@ -6,19 +6,18 @@ import Footer from '@/ui/client/global/footer/Footer';
 import Navbar from '@/ui/client/global/navbar/navbar';
 import { usePathname } from 'next/navigation';
 
-
 interface IProps {
   children: React.ReactNode;
 }
 
-export default function RootLayout({ children}: IProps) {
+export default function RootLayout({ children }: IProps) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
   return (
-    <html lang='tr'>
+    <html lang="tr">
       <head>
         <title>Haydarpaşa Lisesi</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -41,13 +40,13 @@ export default function RootLayout({ children}: IProps) {
         <meta name="author" content="Haydarpaşa Lisesi" />
       </head>
       <body
-        className={`  max-w-screen min-h-screen overflow-x-hidden  ${isOpen ? 'overflow-hidden overflow-y-hidden' : ''
-          }`}
+        className={`  max-w-screen min-h-screen overflow-x-hidden  ${
+          isOpen ? 'overflow-hidden overflow-y-hidden' : ''
+        }`}
       >
-    
-          <Navbar setIsOpen={setIsOpen} isOpen={isOpen} />
-          {children}
-          <Footer />
+        <Navbar setIsOpen={setIsOpen} isOpen={isOpen} />
+        {children}
+        <Footer />
       </body>
     </html>
   );

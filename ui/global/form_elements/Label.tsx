@@ -1,17 +1,18 @@
 interface LabelProps {
-    htmlFor: string;
-    classNames?: string;
-    children: React.ReactNode;
+  htmlFor: string;
+  classNames?: string;
+  children: React.ReactNode;
 }
 
-const Label = ({htmlFor,classNames,children}:LabelProps) => {
+const Label = ({ htmlFor, classNames, children }: LabelProps) => {
   return (
     <label
-    htmlFor={htmlFor}
-    className={`block mb-2 text-primary-3 text-sm font-bold  ${classNames}}`}
-  >
-    {children}
-  </label>  )
-}
+      htmlFor={htmlFor}
+      className={`mb-2 block text-sm font-bold text-primary-3  ${classNames}}`}
+    >
+      {children}
+    </label>
+  );
+};
 
-export default Label
+export default Label;

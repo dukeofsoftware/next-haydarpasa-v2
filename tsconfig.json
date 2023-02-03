@@ -34,6 +34,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "constants/kulupler.ts","./global-types.d.ts", "pages/api/auth/[...nextauth].ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "constants/kulupler.ts","./global-types.d.ts", "pages/api/auth/[...nextauth].ts", "app/(dashboard)/dashboard/haberler/TDButtons"],
   "exclude": ["node_modules"]
 }

@@ -13,7 +13,7 @@ interface NavProps {
 function Navbar({ isOpen, setIsOpen }: NavProps) {
   const [posts, setPosts] = useState([]);
   const getPosts = async () => {
-    await fetch('/api/posts', {
+    await fetch(`/api/posts`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -27,6 +27,8 @@ function Navbar({ isOpen, setIsOpen }: NavProps) {
   };
   useEffect(() => {
     getPosts();
+    console.log(posts);
+    console.log(process.env.SECRET_TOKEN);
   }, []);
   return (
     <>

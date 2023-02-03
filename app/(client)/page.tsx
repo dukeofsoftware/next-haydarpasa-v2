@@ -9,7 +9,7 @@ export default function Page() {
       <Landing />
       <KlüpŞeridi />
       <Hero />
-      <TanıtımFormu/>
+      <TanıtımFormu />
     </div>
   );
 }

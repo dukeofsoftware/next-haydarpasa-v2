@@ -1,27 +1,29 @@
-import teacher from "@/public/ogretmenler/teacher.jpg"
+import teacher from '@/public/ogretmenler/teacher.jpg';
 
-export const ogretmenler = [{
-    isim: "Fuat Ses",
-    branş: "Matematik",
+export const ogretmenler = [
+  {
+    isim: 'Fuat Ses',
+    branş: 'Matematik',
     ogretmenSRC: teacher,
-},
-{
-    isim: "Fuat Ses",
-    branş: "Matematik",
+  },
+  {
+    isim: 'Fuat Ses',
+    branş: 'Matematik',
     ogretmenSRC: teacher,
-},
-{
-    isim: "Fuat Ses",
-    branş: "Matematik",
+  },
+  {
+    isim: 'Fuat Ses',
+    branş: 'Matematik',
     ogretmenSRC: teacher,
-},
-{
-    isim: "Fuat Ses",
-    branş: "Matematik",
+  },
+  {
+    isim: 'Fuat Ses',
+    branş: 'Matematik',
     ogretmenSRC: teacher,
-},
-{
-    isim: "Fuat Ses",
-    branş: "Matematik",
+  },
+  {
+    isim: 'Fuat Ses',
+    branş: 'Matematik',
     ogretmenSRC: teacher,
-}]
+  },
+];

@@ -1,6 +1,7 @@
-import { createAdmin } from "@/lib/prisma/admin";
+import { createAdmin } from '@/lib/prisma/admin';
 const handler = async (req, res) => {
-  if (req.query.secret !== process.env.SECRET_TOKEN) return res.status(401).json({message:"Invalid Token"})
+  if (req.query.secret !== process.env.SECRET_TOKEN)
+    return res.status(401).json({ message: 'Invalid Token' });
 
   if (req.method === 'POST') {
     try {

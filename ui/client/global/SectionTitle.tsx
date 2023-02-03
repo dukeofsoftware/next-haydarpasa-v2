@@ -1,10 +1,13 @@
 interface SectionTitleProps {
   children: React.ReactNode;
+  classNames?: string;
 }
 
-const SectionTitle = ({ children }: SectionTitleProps) => {
+const SectionTitle = ({ children, classNames }: SectionTitleProps) => {
   return (
-    <h4 className="my-10 text-center text-3xl font-bold text-white">
+    <h4
+      className={`${classNames} py-4 text-center  text-xl font-extrabold uppercase text-primary-3 xl:text-2xl `}
+    >
       {children}
     </h4>
   );

@@ -1,15 +1,16 @@
-import { sözSection } from "./constants"
+import { sözSection } from './constants';
 
 const SozSection = () => {
   return (
-    <section className="w-full min-h-48 flex flex-col  justify-center  border-[4px] md:border-[10px] border-primary-1 gap-5 my-[2rem] md:my-[64px] p-4 md:p-9 relative ">
-    <p className="text-red-700 text-base md:text-xl font-bold">
-      {sözSection.söz}
-    </p>
-    <span className="font-bold md:font-extrabold  text-xl md:text-3xl text-primary">
-      {sözSection.isim}
-    </span>
-  </section>  )
-}
+    <section className="min-h-48 relative my-[2rem] flex  w-full  flex-col justify-center gap-5 border-[4px] border-primary-1 p-4 md:my-[64px] md:border-[10px] md:p-9 ">
+      <p className="text-base font-bold text-red-700 md:text-xl">
+        {sözSection.söz}
+      </p>
+      <span className="text-primary text-xl  font-bold md:text-3xl md:font-extrabold">
+        {sözSection.isim}
+      </span>
+    </section>
+  );
+};
 
-export default SozSection
+export default SozSection;

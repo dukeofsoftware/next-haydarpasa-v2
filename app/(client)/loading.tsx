@@ -1,9 +1,7 @@
-import CircleLoader from '@/ui/global/loading'
+import CircleLoader from '@/ui/global/loading';
 
 const Loading = () => {
-  return (
-    <CircleLoader/>
-    )
-}
+  return <CircleLoader />;
+};
 
-export default Loading
+export default Loading;
