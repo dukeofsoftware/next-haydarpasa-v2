@@ -21,7 +21,7 @@ function Accordion({ links, main }: AccordionProps) {
         }`}
       >
         <div className={`flex flex-col gap-3 overflow-hidden md:gap-2   `}>
-          {links.map((link, index) => (
+          {links.map((link) => (
             <AccordionLink key={link.title} link={link} />
           ))}
         </div>

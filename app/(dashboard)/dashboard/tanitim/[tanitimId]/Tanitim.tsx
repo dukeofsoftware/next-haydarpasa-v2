@@ -15,7 +15,7 @@ function Haber({ tanitim }: { tanitim: any }) {
               <h2 className="mb-2 text-xl font-semibold leading-none text-gray-900 md:text-2xl ">
                 {tanitim.tamAd}
               </h2>
-              <DeleteTanitim id={tanitim.id} />
+              <DeleteTanitim id={tanitim.id} setIsLoading={setIsLoading} />
             </div>
             <p className="mb-4 text-xl font-extrabold leading-none text-gray-900 md:text-2xl ">
               {tanitim.id}

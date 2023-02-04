@@ -1,5 +1,5 @@
 import { FaBeer, FaUserFriends } from 'react-icons/fa';
-import { BiNews, BiTimeFive } from 'react-icons/bi';
+import { BiNews } from 'react-icons/bi';
 import { BsCalendarEventFill } from 'react-icons/bs';
 
 export const sidebarLinks = [

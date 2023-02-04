@@ -17,7 +17,7 @@ function Haberler({ posts }: Posts) {
 
   return (
     <div className=" xl:  hide-scrollbar fixed  left-0 z-30 hidden h-full min-h-screen w-8/12 gap-3   overflow-y-auto bg-black/90 pt-[200px] backdrop-blur-md delay-75 xl:block xl:w-10/12 xl:px-[5%] ">
-      <h1 className="text-xl font-bold text-white">Haydarpaşa'dan </h1>
+      <h1 className="text-xl font-bold text-white">Haydarpaşa&apos;dan </h1>
       <h1 className="text-8xl font-extrabold text-primary-3">En yeniler</h1>
       <motion.div
         variants={container}

@@ -28,7 +28,7 @@ function TanıtımFormu() {
     e.preventDefault();
 
     setIsLoading(true);
-    const res = await fetch('/api/tanitim', {
+    await fetch('/api/tanitim', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

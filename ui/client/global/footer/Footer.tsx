@@ -12,7 +12,7 @@ const Footer = () => {
         {/* Sosyal medya */}
         <div className="flex flex-none flex-col gap-4   ">
           <div>
-            <h1 className="text-xl font-bold">Haydarpaşa'yı takip et</h1>
+            <h1 className="text-xl font-bold">Haydarpaşa&apos;yı takip et</h1>
           </div>
           <div className="flex flex-wrap justify-center gap-4 md:flex-nowrap">
             {socialLinks.map((item) => (

@@ -8,13 +8,13 @@ const Landing = () => {
       <div className=" mx-auto flex h-full max-w-screen-xl flex-col items-center justify-center px-4 text-center lg:py-16 lg:px-12">
         <LandingTitle>Biz öğrencileri geliştiriyoruz.</LandingTitle>
         <LandingBody>
-          Haydarpaşa Lisesi'nde biz kişisel gelişime, akademik başarıya ve
+          Haydarpaşa Lisesi&apos;nde biz kişisel gelişime, akademik başarıya ve
           sosyal etkinliklere önem veririz. Öğrencilerimizin hayata
           hazırlanmalarına yardım ederiz.
         </LandingBody>
         <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 lg:mb-16">
           <LandingButton href="/kesfet/kisaca">
-            Haydarpaşa'yı keşfet
+            Haydarpaşa&apos;yı keşfet
             <svg
               className="ml-2 -mr-1 h-5 w-5"
               fill="currentColor"
