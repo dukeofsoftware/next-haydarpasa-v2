@@ -64,6 +64,8 @@ const Footer = () => {
         </div>
         <div className="block w-full flex-initial md:max-w-[500px] lg:hidden ">
           <iframe
+            title='Harita'
+
             src={footer.KONUM}
             width="500"
             height="500"
@@ -75,10 +77,11 @@ const Footer = () => {
           ></iframe>
         </div>
       </div>
-      {/* Harita */}
+      {/* Harita */}r
 
       <div className="hidden w-full flex-initial md:max-w-[400px] lg:block ">
         <iframe
+          title='Harita'
           src={footer.KONUM}
           width="400"
           height="400"

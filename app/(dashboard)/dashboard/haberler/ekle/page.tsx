@@ -25,7 +25,7 @@ const page = () => {
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    createNews(state.baslik, state.icerik, state.imageURL);
+    await createNews(state.baslik, state.icerik, state.imageURL);
     setState({
       baslik: '',
       icerik: '',

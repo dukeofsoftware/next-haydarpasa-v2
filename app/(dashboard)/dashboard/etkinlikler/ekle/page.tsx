@@ -35,7 +35,7 @@ const page = () => {
     e.preventDefault();
 
     setIsLoading(true);
-    createEvents(
+    await createEvents(
       state.title,
       state.content,
       state.imageURL,

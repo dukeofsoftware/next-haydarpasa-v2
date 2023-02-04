@@ -1,6 +1,6 @@
 import { cizerges } from './constants';
 import SectionTitle from '@/ui/client/global/SectionTitle';
-async function page() {
+function page() {
   return (
     <section className="min-h-screen w-full bg-white px-[10%] pt-12">
       <SectionTitle>Haydarpaşa lisesi ders giriş çıkış saatleri</SectionTitle>
