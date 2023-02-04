@@ -10,13 +10,13 @@ const KlüpŞeridi = () => {
 
       <article className="wrapper">
         <div className="marquee">
-          {klupSeridiUst.map((klupler, idx) => (
+          {klupSeridiUst.map((kulupler, idx) => (
             <div key={idx} className="marquee__group">
-              {klupler.map((klup) => (
-                <Link key={klup.alt} className="img-con " href={klup.href}>
+              {kulupler.map((kulup) => (
+                <Link key={kulup.alt} className="img-con " href={kulup.href}>
                   <Image
-                    src={klup.src}
-                    alt={klup.alt}
+                    src={kulup.src}
+                    alt={kulup.alt}
                     width={150}
                     height={150}
                   />
@@ -27,13 +27,13 @@ const KlüpŞeridi = () => {
         </div>
 
         <div className="marquee marquee--reverse">
-          {klupSeridiAlt.map((klupler) => (
-            <div className="marquee__group">
-              {klupler.map((klup) => (
-                <Link key={klup.alt} className="img-con " href={klup.href}>
+          {klupSeridiAlt.map((kulupler) => (
+            <div key="" className="marquee__group">
+              {kulupler.map((kulup) => (
+                <Link key={kulup.alt} className="img-con " href={kulup.href}>
                   <Image
-                    src={klup.src}
-                    alt={klup.alt}
+                    src={kulup.src}
+                    alt={kulup.alt}
                     width={150}
                     height={150}
                   />

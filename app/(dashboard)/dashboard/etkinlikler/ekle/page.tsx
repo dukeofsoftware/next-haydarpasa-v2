@@ -30,7 +30,6 @@ const page = () => {
       ...state,
       [event.target.name]: event.target.value,
     });
-    console.log(logoURL);
   };
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -145,6 +144,7 @@ const page = () => {
                 selected={startDate}
                 showTimeSelect
                 locale="tr"
+                //@ts-ignore
                 onChange={(date) => setStartDate(date)}
                 dateFormat="Pp"
               />

@@ -94,21 +94,9 @@ function EditEvent({ event, changeLoading }: EditEventProps) {
             showTimeSelect
             locale="tr"
             onChange={(date: Date) => {
-              console.log(
-                'Update öncesi : ',
-                'startDate:',
-                startDate,
-                'Girilen Date',
-                date,
-              );
+            
               setStartDate(date);
-              console.log(
-                'Update Sonrası : ',
-                'startDate:',
-                startDate,
-                'Girilen Date',
-                date,
-              );
+            
             }}
             dateFormat="Pp"
           />

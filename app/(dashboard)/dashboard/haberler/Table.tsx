@@ -7,7 +7,7 @@ const Table = ({ posts }: Posts) => {
   const [postlar, setPostlar] = useState<Post[]>(posts);
 
   return (
-    <section classNames="flex flex-col gap-4 ">
+    <section className="flex flex-col gap-4 ">
       <Link
         href="/dashboard/haberler/ekle"
         className="Haber bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700"

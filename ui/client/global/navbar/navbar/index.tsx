@@ -27,8 +27,7 @@ function Navbar({ isOpen, setIsOpen }: NavProps) {
   };
   useEffect(() => {
     getPosts();
-    console.log(posts);
-    console.log(process.env.SECRET_TOKEN);
+
   }, []);
   return (
     <>

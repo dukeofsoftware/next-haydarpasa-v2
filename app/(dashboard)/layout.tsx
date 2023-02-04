@@ -13,7 +13,7 @@ export default async function RootLayout({ children }: IProps) {
     redirect('/auth');
   }
   return (
-    <html>
+    <html lang="tr">
       <head>
         <title>Dashboard</title>
       </head>
