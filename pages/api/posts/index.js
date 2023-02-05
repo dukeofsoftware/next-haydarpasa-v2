@@ -1,8 +1,7 @@
 import {
   createPost,
   getPosts,
-  deletePostById,
-  updatePostById,
+
 } from 'lib/prisma/news';
 const handler = async (req, res) => {
   if (req.method === 'GET') {

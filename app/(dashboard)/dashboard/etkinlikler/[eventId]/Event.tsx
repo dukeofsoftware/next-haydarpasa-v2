@@ -23,7 +23,7 @@ function formatDate(date: Date) {
   );
 }
 
-function Event({ event }: any) {
+function Event({ event }:any) {
   const [isLoading, setIsLoading] = useState(false);
 
   function changeLoading(state: boolean) {

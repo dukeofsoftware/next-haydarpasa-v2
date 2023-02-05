@@ -2,7 +2,6 @@ import Image from 'next/image'
 
 import {kadro} from "./constants"
 import İdari from "./İdari"
-import { okulFotografları } from '@/constants/okul_fotografları';
 function page() {
 
   return (

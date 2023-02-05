@@ -62,36 +62,11 @@ const Footer = () => {
             {footer.ULASIM_3}
           </p>
         </div>
-        <div className="block w-full flex-initial md:max-w-[500px] lg:hidden ">
-          <iframe
-            title='Harita'
-
-            src={footer.KONUM}
-            width="500"
-            height="500"
-            className="w-full "
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+    
       </div>
-      {/* Harita */}r
+      {/* Harita */}
 
-      <div className="hidden w-full flex-initial md:max-w-[400px] lg:block ">
-        <iframe
-          title='Harita'
-          src={footer.KONUM}
-          width="400"
-          height="400"
-          className="w-full "
-          style={{ border: 0 }}
-          allowFullScreen={true}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
+   
     </footer>
   );
 };

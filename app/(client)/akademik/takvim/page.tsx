@@ -11,9 +11,11 @@ async function page() {
       <SectionTitle>
         Haydarpaşa Lisesinde olacak en güncel etkinlikler
       </SectionTitle>
-      {events?.map((event: EventTypes) => (
+      {events ? events.map((event: EventTypes) => (
         <Event key={event.id} event={event} />
-      ))}
+      )) :
+        <h1>Etkinlik bulunamadı...</h1>
+      }
     </ContainerComp>
   );
 }

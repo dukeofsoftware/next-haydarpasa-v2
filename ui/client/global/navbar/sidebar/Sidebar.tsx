@@ -1,11 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Accordion from '../accordion';
 import { links, sidebarVariants } from './constants';
 import { logolar } from '@/constants/okul_logoları';
 import Image from 'next/image';
 import CloseButton from './CloseButton';
+import Accordion from '../accordion';
 
 interface SidebarProps {
   setIsOpen: (state: boolean) => void;

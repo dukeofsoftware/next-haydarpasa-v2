@@ -5,7 +5,7 @@ import Link from 'next/link';
 import SectionTitle from '@/ui/client/global/SectionTitle';
 const KlüpŞeridi = () => {
   return (
-    <section>
+    <section className='relative'>
       <SectionTitle>Kulüplerimiz</SectionTitle>
 
       <article className="wrapper">
