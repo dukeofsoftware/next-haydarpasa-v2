@@ -94,9 +94,7 @@ function EditEvent({ event, changeLoading }: EditEventProps) {
             showTimeSelect
             locale="tr"
             onChange={(date: Date) => {
-            
               setStartDate(date);
-            
             }}
             dateFormat="Pp"
           />

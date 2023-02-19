@@ -2,7 +2,13 @@
 import { useRouter } from 'next/navigation';
 import { deleteNew } from 'utils/tanitim';
 
-function DeleteTanitim({ id, setIsLoading }: { id: string, setIsLoading: any }) {
+function DeleteTanitim({
+  id,
+  setIsLoading,
+}: {
+  id: string;
+  setIsLoading: any;
+}) {
   const router = useRouter();
 
   const deleteTanitim = async () => {
@@ -21,7 +27,6 @@ function DeleteTanitim({ id, setIsLoading }: { id: string, setIsLoading: any }) 
       >
         Sil
       </button>
-
     </div>
   );
 }

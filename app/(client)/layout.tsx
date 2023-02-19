@@ -1,6 +1,7 @@
 'use client';
 import '../../styles/reset.css';
 import '../../styles/globals.css';
+
 import React, { useEffect, useState } from 'react';
 import Footer from '@/ui/client/global/footer/Footer';
 import Navbar from '@/ui/client/global/navbar/navbar';

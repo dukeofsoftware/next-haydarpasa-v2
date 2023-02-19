@@ -1,8 +1,4 @@
-import {
-  createPost,
-  getPosts,
-
-} from 'lib/prisma/news';
+import { createPost, getPosts } from 'lib/prisma/news';
 const handler = async (req, res) => {
   if (req.method === 'GET') {
     try {

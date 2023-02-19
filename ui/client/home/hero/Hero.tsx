@@ -6,8 +6,8 @@ import HeroBody from './HeroBody';
 const Hero = () => {
   return (
     <ContainerComp classNames="bg-gradient-to-r from-red-200  to-primary-2 py-12 flex items-center justify-center mx-auto">
-      <div className="grid grid-rows-1  rounded-lg items-center  justify-center lg:grid-cols-2 lg:place-content-center ">
-        <div className="rounded-lg bg-white z-10 mb-12 h-full md:mt-12 lg:mt-0 lg:mb-0">
+      <div className="grid grid-rows-1  items-center justify-center  rounded-lg lg:grid-cols-2 lg:place-content-center ">
+        <div className="z-10 mb-12 h-full rounded-lg bg-white md:mt-12 lg:mt-0 lg:mb-0">
           <div className="block rounded-lg py-6  px-3 shadow-lg backdrop-blur-[2px] md:px-12 lg:-mr-8 ">
             <div className="relative my-2 block h-[50vw] w-full md:mb-12 lg:mb-0 lg:hidden lg:h-[25vw]  lg:min-h-[25rem]">
               <Image

@@ -4,10 +4,8 @@ import Iframe from 'react-iframe'
 function Frame({height}) {
   return (
     <Iframe url="https://www.youtube.com/embed/or3ImGvZsPA"
-    width="100%"
     height={height}
-    id=""
-    className=""
+    className="aspect-video w-full h-full	"
     display="block"
     position="relative"/>
   )

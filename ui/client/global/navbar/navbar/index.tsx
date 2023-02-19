@@ -27,7 +27,6 @@ function Navbar({ isOpen, setIsOpen }: NavProps) {
   };
   useEffect(() => {
     getPosts();
-
   }, []);
   return (
     <>

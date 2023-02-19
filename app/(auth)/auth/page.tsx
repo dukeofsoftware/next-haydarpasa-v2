@@ -14,8 +14,8 @@ function page() {
     e.preventDefault();
 
     const res = await signIn('credentials', {
-       email,
-       password,
+      email,
+      password,
       redirect: false,
     });
     if (res?.ok) {

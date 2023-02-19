@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -20,14 +21,6 @@ const nextConfig = {
     serverComponentsExternalPackages: ['prisma'],
 
     appDir: true,
-  },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/i,
-      use: ['@svgr/webpack'],
-    });
-
-    return config;
   },
 };
 

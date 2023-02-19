@@ -62,11 +62,8 @@ const Footer = () => {
             {footer.ULASIM_3}
           </p>
         </div>
-    
       </div>
       {/* Harita */}
-
-   
     </footer>
   );
 };

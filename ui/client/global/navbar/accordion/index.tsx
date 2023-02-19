@@ -11,7 +11,7 @@ function Accordion({ links, main }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className=" flex w-full flex-col gap-2   ">
-      <div className=" border-primary-1/50 bg-primary-3 my-[0.33rem] flex w-full items-center justify-between  border-y-[1px]  hover:bg-primary-1 md:hover:bg-primary-2 md:border-slate-200/50 md:bg-transparent ">
+      <div className=" my-[0.33rem] flex w-full items-center justify-between border-y-[1px] border-primary-1/50  bg-primary-3  hover:bg-primary-1 md:border-slate-200/50 md:bg-transparent md:hover:bg-primary-2 ">
         <MainLink main={main} />
         <AccordionButton setIsOpen={setIsOpen} isOpen={isOpen} />
       </div>

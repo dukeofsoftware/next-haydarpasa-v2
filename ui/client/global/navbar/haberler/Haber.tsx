@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Post } from '@/types/PostTypes';
 // @ts-ignore
 function Haber({ post }: Post) {
-
   const item = {
     hidden: { opacity: 0 },
     show: { opacity: 1 },

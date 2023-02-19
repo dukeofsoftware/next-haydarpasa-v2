@@ -2,11 +2,10 @@ import LandingTitle from './LandingTitle';
 import { okulFotografları } from '@/constants/okul_fotografları';
 import LandingBody from './LandingBody';
 import LandingButton from './LandingButton';
-import  Image from 'next/image';
+import Image from 'next/image';
 const Landing = () => {
   return (
     <section className="relative h-[80vw] max-h-[95vh] min-h-[69vh] w-full pt-[5rem] sm:h-[70vw] sm:min-h-[59vh]   ">
-   
       <div className="z-20 mx-auto flex h-full max-w-screen-xl flex-col items-center justify-center px-4 text-center lg:py-16 lg:px-12">
         <LandingTitle>Biz öğrencileri geliştiriyoruz.</LandingTitle>
         <LandingBody>
@@ -30,7 +29,7 @@ const Landing = () => {
               ></path>
             </svg>
           </LandingButton>
-          <LandingButton href="/hakkimizda/video">
+          <LandingButton href="/hakkinda/video">
             <svg
               className="mr-2 -ml-1 h-5 w-5 "
               fill="currentColor"
@@ -42,9 +41,7 @@ const Landing = () => {
             Videoyu izle
           </LandingButton>
         </div>
-     
       </div>
-      
     </section>
   );
 };

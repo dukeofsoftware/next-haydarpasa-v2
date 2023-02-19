@@ -13,8 +13,16 @@ const AccordionButton = ({ setIsOpen, isOpen }: AccordionButtonProps) => {
       className={`flex h-[70px] w-[70px] items-center justify-center  md:h-full md:w-auto`}
     >
       <div className={` duration-300 ${isOpen ? 'rotate-0 ' : 'rotate-180'}`}>
-        <AccordionLogo color="white" size={42} classNames="md:hidden block fill-white" />
-        <AccordionLogo color="black" size={36} classNames="hidden md:block fill-white" />
+        <AccordionLogo
+          color="white"
+          size={42}
+          classNames="md:hidden block fill-white"
+        />
+        <AccordionLogo
+          color="black"
+          size={36}
+          classNames="hidden md:block fill-white"
+        />
       </div>
     </button>
   );

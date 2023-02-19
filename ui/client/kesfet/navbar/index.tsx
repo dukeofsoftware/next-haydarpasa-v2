@@ -32,7 +32,8 @@ function KesfetNavbar() {
     <nav className="flex min-h-[300px] w-full flex-col items-center justify-end gap-7 border-b-2 border-primary-5 bg-primary-5 pt-24">
       <div>
         <h1 className="text-xl font-extrabold text-white md:text-2xl xl:text-3xl">
-          Haydarpaşa&apos;yı <span className="text-primary-3">{name}</span> keşfet
+          Haydarpaşa&apos;yı <span className="text-primary-3">{name}</span>{' '}
+          keşfet
         </h1>
       </div>
       <div className="flex flex-wrap justify-center sm:flex-nowrap md:flex-row md:gap-1">

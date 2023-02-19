@@ -1,12 +1,11 @@
 import ContainerComp from '@/ui/global/Container';
 import Image from 'next/image';
 import { Post } from '@/types/PostTypes';
-interface Props{
-  post:Post
+interface Props {
+  post: Post;
 }
 
-function Post({ post }:Props) {
-  
+function Post({ post }: Props) {
   return (
     <ContainerComp classNames="pt-[5rem]  flex flex-col gap-2 min-h-screen items-center">
       <div className="relative h-[60vw]  max-h-[250px]  w-[90%] sm:max-h-[40vh]  sm:min-h-[330px] sm:w-[85vw] lg:w-[70vw] lg:max-w-[770px]">
