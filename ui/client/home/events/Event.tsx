@@ -27,9 +27,9 @@ function Event({ event }: EventProps) {
         <div className="relative h-64 w-full rounded-t bg-cover bg-top">
           <Image src={event.imageURL} alt={event.title} fill />
         </div>
-        <div className="assd:flex-row flex w-full flex-col">
-          <div className="assd:flex-col assd:items-center assd:justify-center assd:w-1/4 flex flex-row justify-around divide-x-2 bg-primary-1  p-4 font-bold uppercase leading-none text-white   md:divide-x-0">
-            <div className="assd:text-3xl flex w-1/4 items-center justify-center">
+        <div className=" flex w-full flex-col">
+          <div className=" flex flex-row justify-around divide-x-2 bg-primary-1  p-4 font-bold uppercase leading-none text-white   md:divide-x-0">
+            <div className=" flex w-1/4 items-center justify-center">
               {yıl}
             </div>
 
@@ -43,13 +43,13 @@ function Event({ event }: EventProps) {
               {saat}
             </div>
           </div>
-          <div className=" assd:w-3/4 min-h-[150px] p-2 font-normal text-gray-800 md:p-4">
-            <h1 className="assd:text-3xl  text-primary mb-4  text-xl font-bold leading-none tracking-tight">
+          <div className="  min-h-[150px] p-2 font-normal text-gray-800 md:p-4 flex flex-col">
+            <h1 className="  text-primary mb-4  text-xl font-bold leading-none tracking-tight">
               {event.title}
             </h1>
             <p className="text-sm leading-normal ">{event.content}</p>
-            <div className="mt-4 flex flex-row items-center text-gray-700">
-              <div className="flex w-full justify-end">
+            <div className="mt-auto flex flex-row items-center text-gray-700">
+              <div className=" flex w-full justify-end">
                 <div className="relative h-8 w-8">
                   <Image src={event.logoURL} alt={event.logoAlt} fill />
                 </div>
