@@ -56,7 +56,7 @@ const page = () => {
               <Input
                 id="title"
                 name="title"
-                updateInput={title.onChange}
+                onChange={title.onChange}
                 value={title.value}
                 placeholder="İçerik Başlığı"
                 required={true}
@@ -68,7 +68,7 @@ const page = () => {
               <Input
                 id="imageURL"
                 name="imageURL"
-                updateInput={imageURL.onChange}
+                onChange={imageURL.onChange}
                 value={imageURL.value}
                 placeholder="Image URL"
                 required={true}
@@ -78,7 +78,7 @@ const page = () => {
             <div className="mb-6">
               <Label htmlFor="content">İçerik</Label>
               <TextArea
-                updateInput={content.onChange}
+                onChange={content.onChange}
                 value={content.value}
                 placeholder="İçeriği girin."
                 required={true}
@@ -92,7 +92,7 @@ const page = () => {
               <Input
                 id="logoAlt"
                 name="logoAlt"
-                updateInput={logoAlt.onChange}
+                onChange={logoAlt.onChange}
                 value={logoAlt.value}
                 placeholder="Bilişim Kulübü Logosu"
                 required={true}
