@@ -1,9 +1,11 @@
 import { getPosts } from 'lib/prisma/news';
-import Table from './Table';
+import Posts from './Posts';
 
 async function page() {
   const { posts } = await getPosts();
-  return <Table posts={posts} />;
+
+
+  return <Posts posts={posts}/> 
 }
 
 export default page;
