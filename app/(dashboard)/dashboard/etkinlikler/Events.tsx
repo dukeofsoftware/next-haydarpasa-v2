@@ -70,6 +70,7 @@ const Events = ({ events }: EventsProps) => {
             </Link>
             <Table
                 head={head}
+               // @ts-ignore
                 body={events.map((event) => [
                     event.id,
                     event.title,
@@ -86,6 +87,7 @@ const Events = ({ events }: EventsProps) => {
                 deletable={{
                     onDelete: deletePost
                 }}
+                json-
             />
 
         </section>

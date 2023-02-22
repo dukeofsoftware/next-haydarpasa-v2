@@ -57,6 +57,7 @@ const Posts = ({ posts }: PostsProps) => {
                     onDelete: deletePost
                 }}
                 searchable={true}
+                // @ts-ignore
                 body={posts.map((post: Post) => {
                     return [
                         post.id,
