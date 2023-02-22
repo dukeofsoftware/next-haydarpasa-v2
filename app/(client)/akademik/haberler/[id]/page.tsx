@@ -4,11 +4,14 @@ import { getPostById, getPosts } from '@/lib/prisma/news';
 async function page({ id }: any) {
   const { post } = await getPostById(id);
 
-  return <Post post={post} />;
+  return <section>
+    {post ? <Post post={post} /> : <div>Post not found</div>
+    }
+  </section>
 }
 
 export default page;
 export async function generateStaticParams() {
   const { posts } = await getPosts();
-  return posts?.map((post: any) => ({ id: `${post.id}` }));
+  return posts && posts.map((post: any) => ({ params: { id: post.id } }));
 }
