@@ -1,3 +1,5 @@
+
+import { memo } from 'react';
 interface LabelProps {
   htmlFor: string;
   classNames?: string;
@@ -5,6 +7,7 @@ interface LabelProps {
 }
 
 const Label = ({ htmlFor, classNames, children }: LabelProps) => {
+  
   return (
     <label
       htmlFor={htmlFor}
@@ -15,4 +18,4 @@ const Label = ({ htmlFor, classNames, children }: LabelProps) => {
   );
 };
 
-export default Label;
+export default memo(Label);

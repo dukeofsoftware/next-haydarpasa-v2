@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import './loading.css';
 const CircleLoader = () => {
   return (
@@ -12,4 +13,4 @@ const CircleLoader = () => {
   );
 };
 
-export default CircleLoader;
+export default memo(CircleLoader);
