@@ -76,7 +76,6 @@ const Events = ({ events }: EventsProps) => {
                     event.title,
                     event.content,
                     event.logoAlt,
-
                     event.dateTime,
                     event.createdAt,
                     event.updatedAt
