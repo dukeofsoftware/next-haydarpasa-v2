@@ -1,36 +1,27 @@
 'use client';
 import Input from '@/ui/global/form_elements/Input';
 import Label from '@/ui/global/form_elements/Label';
-import { ChangeEvent, SyntheticEvent, useState } from 'react';
+import {  SyntheticEvent, useState } from 'react';
 import { createNews } from '@/utils/news';
 import TextArea from '@/ui/global/form_elements/TextArea';
 import Loading from '@/ui/global/loading';
 import ContainerComp from '@/ui/global/Container';
+import { useInput } from 'hooks/useInput';
 
 const page = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [state, setState] = useState({
-    baslik: '',
-    icerik: '',
-    imageURL: '',
-  });
-  const updateInput = (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setState({
-      ...state,
-      [event.target.name]: event.target.value,
-    });
-  };
+    const baslik=useInput("") 
+    const icerik=useInput("") 
+    const imageURL=useInput("") 
+  
+
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    await createNews(state.baslik, state.icerik, state.imageURL);
-    setState({
-      baslik: '',
-      icerik: '',
-      imageURL: '',
-    });
+    await createNews(baslik.value, icerik.value, imageURL.value);
+      baslik.reset()
+      icerik.reset()
+      imageURL.reset()
     setIsLoading(false);
   };
   return (
@@ -45,8 +36,8 @@ const page = () => {
               <Input
                 id="baslik"
                 name="baslik"
-                updateInput={updateInput}
-                value={state.baslik}
+                onChange={baslik.onChange}
+                value={baslik.value}
                 placeholder="İçerik Başlığı"
                 required={true}
                 autoComplete="off"
@@ -57,8 +48,8 @@ const page = () => {
               <Input
                 id="imageURL"
                 name="imageURL"
-                updateInput={updateInput}
-                value={state.imageURL}
+                onChange={imageURL.onChange}
+                value={imageURL.value}
                 placeholder="Image URL"
                 required={true}
                 autoComplete="off"
@@ -67,8 +58,8 @@ const page = () => {
             <div className="mb-6">
               <Label htmlFor="icerik">İçerik</Label>
               <TextArea
-                updateInput={updateInput}
-                value={state.icerik}
+                onChange={icerik.onChange}
+                value={icerik.value}
                 placeholder="İçeriği girin."
                 required={true}
                 name="icerik"
