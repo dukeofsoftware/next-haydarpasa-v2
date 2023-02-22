@@ -10,5 +10,5 @@ async function page({ id }: any) {
 export default page;
 export async function generateStaticParams() {
   const { posts } = await getPosts();
-  return posts.map((post: any) => ({ id: `${post.id}` }));
+  return posts?.map((post: any) => ({ id: `${post.id}` }));
 }
