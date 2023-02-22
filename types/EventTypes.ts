@@ -5,7 +5,7 @@ export interface Event {
   imageURL: string;
   logoAlt: string;
   logoURL: string;
-  dateTime: Date | Array<string| Date> | string;
+  dateTime: Date | string;
   createdAt: Date;
   updatedAt: Date;
 }
