@@ -1,7 +1,7 @@
 'use client';
 import Input from '@/ui/global/form_elements/Input';
 import Label from '@/ui/global/form_elements/Label';
-import { ChangeEvent, SyntheticEvent, useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import tr from 'date-fns/locale/tr';
@@ -12,44 +12,35 @@ import TextArea from '@/ui/global/form_elements/TextArea';
 import Loading from '@/ui/global/loading';
 import ContainerComp from '@/ui/global/Container';
 import { kulüpler } from './constants';
+import { useInput } from 'hooks/useInput';
 
 const page = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [startDate, setStartDate] = useState(new Date());
-  const [logoURL, setLogoURL] = useState('');
-  const [logoAlt, setLogoAlt] = useState('');
-  const [state, setState] = useState({
-    title: '',
-    content: '',
-    imageURL: '',
-  });
-  const updateInput = (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setState({
-      ...state,
-      [event.target.name]: event.target.value,
-    });
-  };
+  const logoURL = useInput("")
+  const logoAlt = useInput("")
+  const title = useInput('')
+  const content = useInput('')
+  const imageURL = useInput('')
+
+
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
     setIsLoading(true);
     await createEvents(
-      state.title,
-      state.content,
-      state.imageURL,
+      title.value,
+      content.value,
+      imageURL.value,
       startDate,
-      logoAlt,
-      logoURL,
+      logoAlt.value,
+      logoURL.value,
     );
-    setState({
-      title: '',
-      content: '',
-      imageURL: '',
-    });
-    setLogoURL('');
-    setLogoAlt('');
+    title.reset()
+    content.reset()
+    imageURL.reset()
+    logoAlt.reset()
+    logoURL.reset()
     setStartDate(new Date());
     setIsLoading(false);
   };
@@ -65,8 +56,8 @@ const page = () => {
               <Input
                 id="title"
                 name="title"
-                updateInput={updateInput}
-                value={state.title}
+                updateInput={title.onChange}
+                value={title.value}
                 placeholder="İçerik Başlığı"
                 required={true}
                 autoComplete="off"
@@ -77,8 +68,8 @@ const page = () => {
               <Input
                 id="imageURL"
                 name="imageURL"
-                updateInput={updateInput}
-                value={state.imageURL}
+                updateInput={imageURL.onChange}
+                value={imageURL.value}
                 placeholder="Image URL"
                 required={true}
                 autoComplete="off"
@@ -87,8 +78,8 @@ const page = () => {
             <div className="mb-6">
               <Label htmlFor="content">İçerik</Label>
               <TextArea
-                updateInput={updateInput}
-                value={state.content}
+                updateInput={content.onChange}
+                value={content.value}
                 placeholder="İçeriği girin."
                 required={true}
                 name="content"
@@ -101,24 +92,23 @@ const page = () => {
               <Input
                 id="logoAlt"
                 name="logoAlt"
-                updateInput={(e) => setLogoAlt(e.target.value)}
-                value={logoAlt}
+                updateInput={logoAlt.onChange}
+                value={logoAlt.value}
                 placeholder="Bilişim Kulübü Logosu"
                 required={true}
                 autoComplete="off"
               />
             </div>
             <div className="mb-6">
-              <label
+              <Label
                 htmlFor="logoURL"
-                className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
               >
                 Kulüp seç
-              </label>
+              </Label>
               <select
-                value={logoURL}
+                value={logoURL.value}
                 name="logoURL"
-                onChange={(e) => setLogoURL(e.target.value)}
+                onChange={logoURL.onChange}
                 id="kulüpler"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
               >
@@ -132,20 +122,18 @@ const page = () => {
               </select>
             </div>
             <div>
-              <label
+              <Label
                 htmlFor="zaman"
-                className="text-primary mb-2 block  text-xl  font-medium"
               >
                 Etkinlik Zamanı
-              </label>
+              </Label>
 
               {/*  */}
               <DatePicker
                 selected={startDate}
                 showTimeSelect
                 locale="tr"
-                //@ts-ignore
-                onChange={(date) => setStartDate(date)}
+                onChange={(date:Date) => setStartDate(date)}
                 dateFormat="Pp"
               />
             </div>
