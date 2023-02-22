@@ -9,7 +9,7 @@ interface DeleteEventProps {
 function DeleteEvent({ id }: DeleteEventProps) {
   const router = useRouter();
 
-  let deleteEvent = async () => {
+  const deleteEvent = async () => {
     await deleteEventById(id);
     router.push('/dashboard/etkinlikler');
   };
