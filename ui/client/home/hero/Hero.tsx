@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <ContainerComp classNames="bg-gradient-to-r from-red-200  to-primary-2 py-12 flex items-center justify-center mx-auto">
       <div className="grid grid-rows-1  items-center justify-center  rounded-lg lg:grid-cols-2 lg:place-content-center ">
-        <div className="z-10 mb-12 h-full rounded-lg bg-white md:mt-12 lg:mt-0 lg:mb-0">
+        <div className="z-10 mb-12  rounded-lg bg-white md:mt-12 lg:mt-0 lg:mb-0">
           <div className="block rounded-lg py-6  px-3 shadow-lg backdrop-blur-[2px] md:px-12 lg:-mr-8 ">
             <div className="relative my-2 block h-[50vw] w-full md:mb-12 lg:mb-0 lg:hidden lg:h-[25vw]  lg:min-h-[25rem]">
               <Image
@@ -17,7 +17,7 @@ const Hero = () => {
                 fill
               />
             </div>
-            <h1 className="mb-5 text-4xl font-bold tracking-tight md:mb-12 md:text-5xl xl:text-6xl">
+            <h1 className="mb-5 text-3xl sm:text-4xl font-bold tracking-tight md:mb-12 md:text-5xl xl:text-6xl">
               {heroConstants.HERO_TITLE} <br />
               <span className="text-primary-3">
                 {heroConstants.HERO_SUBTITLE}
