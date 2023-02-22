@@ -15,6 +15,7 @@ const Event = ({ event }: EventProps) => {
   };
   // @ts-ignore
   const formatter = new Intl.DateTimeFormat('tr-TR', options);
+    // @ts-ignore
 
   const dateTime = formatter.format(new Date(event.dateTime)).split(' ');
   const yıl = dateTime[2];
