@@ -70,7 +70,8 @@ const page = () => {
 
             <button
               type="submit"
-              className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto "
+              disabled={isLoading || !baslik.value || !icerik.value || !imageURL.value || baslik.value === "" || icerik.value === "" || imageURL.value === ""}
+              className="w-full rounded-lg disabled:cursor-not-allowed disabled:bg-blue-400 bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto "
             >
               Ekle
             </button>

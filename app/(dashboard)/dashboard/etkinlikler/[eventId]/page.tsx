@@ -6,7 +6,7 @@ async function page({ params }: any) {
   event.createdAt = event.createdAt.toISOString();
   event.dateTime = event.dateTime.toISOString();
   event.updatedAt = event.updatedAt.toISOString();
-  return <Event event={event} />;
+  return <Event event={event} data-superjson/>;
 }
 export const revalidate = 5;
 export default page;

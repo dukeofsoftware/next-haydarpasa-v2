@@ -22,11 +22,14 @@ function formatDate(date: Date) {
 
 async function page() {
   const { events } = await getEvents();
-
+  events.forEach((post: any) => {
+    post.createdAt = post.createdAt.toISOString();
+    post.updatedAt = post.updatedAt.toISOString();
+  });
   return (
 
     <Events events={events}
-    data-superjson
+      data-superjson
     />
 
 
