@@ -2,6 +2,9 @@ name: preview
 on:
   pull_request:
   workflow_dispatch:
+  push:
+    branches:
+      - preview
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
