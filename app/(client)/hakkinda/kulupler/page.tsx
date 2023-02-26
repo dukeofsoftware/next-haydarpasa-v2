@@ -1,17 +1,17 @@
 import Kulup from './Kulup';
 import { kulupler } from '@/constants/kulupler';
+import SectionTitle from '@/ui/client/global/SectionTitle';
+import ContainerComp from '@/ui/global/Container';
 function page() {
   return (
-    <section className="min-h-screen w-full px-[3%] pt-12 sm:px-[4%] md:px-[5%] lg:px-[6%] xl:px-[7%] ">
-      <h1 className="text-primary text-center text-2xl font-extrabold uppercase">
-        Kulüplerimiz
-      </h1>
+    <ContainerComp classNames="pt-24 min-h-screen">
+      <SectionTitle>Kulüplerimiz</SectionTitle>
       <div className="flex w-full flex-wrap justify-center ">
         {kulupler.map((klup, index) => (
           <Kulup key={index} kulup={klup} />
         ))}
       </div>
-    </section>
+    </ContainerComp>
   );
 }
 
