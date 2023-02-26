@@ -64,6 +64,14 @@ function page() {
 
               <button
                 type="submit"
+                disabled={
+                  !email ||
+                  !password ||
+                  email === '' ||
+                  password === '' ||
+                  email === ' ' ||
+                  password === ' '
+                }
                 className="w-full rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 "
               >
                 Giriş Yap
