@@ -14,15 +14,14 @@ import ContainerComp from '@/ui/global/Container';
 import { kulüpler } from './constants';
 import { useInput } from 'hooks/useInput';
 
-const page = () => {
+const Page = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [startDate, setStartDate] = useState(new Date());
-  const logoURL = useInput("")
-  const logoAlt = useInput("")
-  const title = useInput('')
-  const content = useInput('')
-  const imageURL = useInput('')
-
+  const logoURL = useInput('');
+  const logoAlt = useInput('');
+  const title = useInput('');
+  const content = useInput('');
+  const imageURL = useInput('');
 
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -36,11 +35,11 @@ const page = () => {
       logoAlt.value,
       logoURL.value,
     );
-    title.reset()
-    content.reset()
-    imageURL.reset()
-    logoAlt.reset()
-    logoURL.reset()
+    title.reset();
+    content.reset();
+    imageURL.reset();
+    logoAlt.reset();
+    logoURL.reset();
     setStartDate(new Date());
     setIsLoading(false);
   };
@@ -100,11 +99,7 @@ const page = () => {
               />
             </div>
             <div className="mb-6">
-              <Label
-                htmlFor="logoURL"
-              >
-                Kulüp seç
-              </Label>
+              <Label htmlFor="logoURL">Kulüp seç</Label>
               <select
                 value={logoURL.value}
                 name="logoURL"
@@ -122,26 +117,32 @@ const page = () => {
               </select>
             </div>
             <div>
-              <Label
-                htmlFor="zaman"
-              >
-                Etkinlik Zamanı
-              </Label>
+              <Label htmlFor="zaman">Etkinlik Zamanı</Label>
 
               {/*  */}
               <DatePicker
                 selected={startDate}
                 showTimeSelect
                 locale="tr"
-                onChange={(date:Date) => setStartDate(date)}
+                onChange={(date: Date) => setStartDate(date)}
                 dateFormat="Pp"
               />
             </div>
 
             <button
               type="submit"
-              disabled = {title.value === "" || content.value === "" || imageURL.value === "" || logoAlt.value === "" || logoURL.value === "" || startDate === null || startDate === undefined || startDate === new Date() || isLoading}
-              className="w-full rounded-lg disabled:cursor-not-allowed disabled:bg-blue-400 bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto "
+              disabled={
+                title.value === '' ||
+                content.value === '' ||
+                imageURL.value === '' ||
+                logoAlt.value === '' ||
+                logoURL.value === '' ||
+                startDate === null ||
+                startDate === undefined ||
+                startDate === new Date() ||
+                isLoading
+              }
+              className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:cursor-not-allowed disabled:bg-blue-400 sm:w-auto "
             >
               Ekle
             </button>
@@ -152,4 +153,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
