@@ -19,7 +19,7 @@ const nextConfig = {
   },
   experimental: {
     serverComponentsExternalPackages: ['prisma'],
-    swcPlugins: [["next-superjson-plugin", {}]],
+    swcPlugins: [['next-superjson-plugin', {}]],
 
     appDir: true,
   },
