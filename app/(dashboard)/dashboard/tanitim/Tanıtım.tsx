@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import Table from '@/ui/dashboard/global/Table';
 import { deleteNew } from 'utils/tanitim';
 
@@ -7,10 +7,8 @@ interface TanıtımProps {
 }
 function Tanıtım({ tanitims }: TanıtımProps) {
   const handleDelete = async (id: string) => {
-
     await deleteNew(id);
-
-  }
+  };
   const head = [
     { name: 'id', width: 1, sortable: false },
 
@@ -20,9 +18,7 @@ function Tanıtım({ tanitims }: TanıtımProps) {
 
     { name: 'Mesaj ', sortable: false },
     { name: 'Gönderim Tarihi', sortable: true },
-
-
-  ]
+  ];
   return (
     <section>
       <Table
@@ -35,12 +31,11 @@ function Tanıtım({ tanitims }: TanıtımProps) {
             tanitim.telefon,
             tanitim.mesaj,
             tanitim.createdAt,
-          ]
+          ];
         })}
         deletable={{
-          onDelete: handleDelete
+          onDelete: handleDelete,
         }}
-
       />
     </section>
   );

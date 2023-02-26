@@ -1,4 +1,3 @@
-
 import { memo } from 'react';
 interface LabelProps {
   htmlFor: string;
@@ -7,7 +6,6 @@ interface LabelProps {
 }
 
 const Label = ({ htmlFor, classNames, children }: LabelProps) => {
-  
   return (
     <label
       htmlFor={htmlFor}
