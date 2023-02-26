@@ -1,51 +1,60 @@
-'use client';
 import '../../styles/reset.css';
 import '../../styles/globals.css';
-
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Footer from '@/ui/client/global/footer/Footer';
 import Navbar from '@/ui/client/global/navbar/navbar';
-import { usePathname } from 'next/navigation';
+import type { Metadata } from 'next'
 
 interface IProps {
   children: React.ReactNode;
 }
+export const metadata: Metadata = {
+  title: 'Haydarpaşa Lisesi',
+  description: "Haydarpaşa Lisesi 1934 yılından beri eğitime öncü eden köklü bir eğitim kurumdur.",
+  keywords: ["Haydarpaşa,Lise, Haydarpaşa Lisesi, haydarpaşa,lise ,1934, eğitim, lgs,education, Haydarpasa, altunizade, acıbadem ,okul,kurum,Altunizade, tyt,yks"],
+  creator: "Haydarpaşa Lisesi Bilişim Kulübü",
+  authors: [{ name: "Furkan Emre Kozan", url: "https://www.linkedin.com/in/dukeofsoftware/" }],
+  publisher: "Haydarpaşa Lisesi",
+  applicationName: 'Next.js',
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: true,
+    address: false,
+    telephone: true,
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: "../public/logolar/haydarpasaBeyaz.png"
+  }
+}
+
+
 
 export default function RootLayout({ children }: IProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
+
   return (
     <html lang="tr">
       <head>
-        <title>Haydarpaşa Lisesi</title>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta charSet="UTF-8" />
-        <meta
-          name="keywords"
-          content="Haydarpaşa,Lise, Haydarpaşa Lisesi, haydarpaşa,lise ,1934, eğitim, lgs,education, Haydarpasa, altunizade, acıbadem ,okul,kurum,Altunizade, tyt,yks"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="../public/logolar/logotrans.png"
-        />
-        <meta
-          name="description"
-          content="Haydarpaşa Lisesi 1934 yılından beri eğitime öncü eden köklü bir eğitim kurumdur."
-        />
-        <meta name="robots" content="index, follow" />
-
-        <meta name="author" content="Haydarpaşa Lisesi" />
+     
       </head>
       <body
-        className={`  max-w-screen min-h-screen overflow-x-hidden  ${
-          isOpen ? 'overflow-hidden overflow-y-hidden' : ''
-        }`}
+        className={`  max-w-screen min-h-screen overflow-x-hidden 
+          }`}
       >
-        <Navbar setIsOpen={setIsOpen} isOpen={isOpen} />
+        <Navbar />
         {children}
         <Footer />
       </body>
