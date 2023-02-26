@@ -17,16 +17,12 @@ function EditEvent({ event, changeLoading }: EditEventProps) {
   const router = useRouter();
   const [startDate, setStartDate] = useState(new Date());
 
-  const title = useInput(event?.title || "")
-  const content = useInput(event?.content || "")
-  const [startTime, setStartTime] = useState(event?.dateTime || new Date())
-  const imageURL = useInput(event?.imageURL || '')
-  const logoURL = useInput(event?.logoAlt || '')
-  const logoAlt = useInput(event?.logoAlt || '')
-
-
-
-
+  const title = useInput(event?.title || '');
+  const content = useInput(event?.content || '');
+  const [startTime, setStartTime] = useState(event?.dateTime || new Date());
+  const imageURL = useInput(event?.imageURL || '');
+  const logoURL = useInput(event?.logoAlt || '');
+  const logoAlt = useInput(event?.logoAlt || '');
 
   const editEvent = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -157,7 +153,15 @@ function EditEvent({ event, changeLoading }: EditEventProps) {
             type="submit"
             className="in-ease-out delay-25 inline-flex max-w-[300px] rounded-lg bg-primary-5 py-2 px-3 text-xl font-medium text-white duration-300 hover:bg-primary-1 "
             value="Kaydet"
-            disabled={title.value === '' || content.value === '' || imageURL.value === '' || logoURL.value === '' || logoAlt.value === '' || startDate === null || startTime === null}
+            disabled={
+              title.value === '' ||
+              content.value === '' ||
+              imageURL.value === '' ||
+              logoURL.value === '' ||
+              logoAlt.value === '' ||
+              startDate === null ||
+              startTime === null
+            }
           >
             Kaydet
           </button>

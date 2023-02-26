@@ -19,13 +19,11 @@ function Haber({ id, title, content, imageURL }: Post) {
       </Link>
       <div className="p-5">
         <Link href={`/akademik/haberler/${id}`}>
-          <h5 className="text-primary-3 mb-2 text-2xl font-bold tracking-tight">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-primary-3">
             {title}
           </h5>
         </Link>
-        <p className="mb-3 font-normal text-gray-700 ">
-          {content}
-        </p>
+        <p className="mb-3 font-normal text-gray-700 ">{content}</p>
         <Link
           href={`/akademik/haberler/${id}`}
           className="bg-primary hover:bg-secondary in-ease-out inline-flex items-center rounded-lg px-3 py-2 text-center text-sm font-medium text-white duration-300 focus:outline-none  focus:ring-4 focus:ring-red-300 "

@@ -1,21 +1,19 @@
 import ContainerComp from '@/ui/global/Container';
-import type { Metadata } from 'next'
-
-
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tanıtım Filmi',
-  description: "Haydarpaşa Lisesinin tanıtım videosu",
+  description: 'Haydarpaşa Lisesinin tanıtım videosu',
   robots: {
     index: false,
     follow: false,
     nocache: false,
     googleBot: {
       index: false,
-      follow: false
- 
-  }
-}}
+      follow: false,
+    },
+  },
+};
 
 const Page = () => {
   return (

@@ -7,8 +7,6 @@ import NavbarButton from './NavbarButton';
 import Sidebar from '@/ui/client/global/navbar/sidebar/Sidebar';
 import { usePathname } from 'next/navigation';
 
-
-
 function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -33,20 +31,20 @@ function Navbar() {
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
-  useEffect(()=>{
-    if(isOpen){
+  useEffect(() => {
+    if (isOpen) {
       document.body.style.overflow = 'hidden';
-    }else{
+    } else {
       document.body.style.overflow = 'unset';
     }
-
-  },[isOpen])
+  }, [isOpen]);
   return (
     <>
       <div>
         <div
-          className={`${pathname === '/' ? 'absolute' : 'mb-6'
-            } absolute z-30 flex max-h-[90px] w-full items-center justify-between  px-[4%] py-4 lg:px-[7%]`}
+          className={`${
+            pathname === '/' ? 'absolute' : 'mb-6'
+          } absolute z-30 flex max-h-[90px] w-full items-center justify-between  px-[4%] py-4 lg:px-[7%]`}
         >
           <NavbarLogos isOpen={isOpen} />
           <NavbarButton isOpen={isOpen} setIsOpen={setIsOpen} />
