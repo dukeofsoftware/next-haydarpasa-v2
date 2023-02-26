@@ -5,7 +5,7 @@ import Link from 'next/link';
 import SectionTitle from '@/ui/client/global/SectionTitle';
 const KlüpŞeridi = () => {
   return (
-    <section className="relative">
+    <section className="relative py-12">
       <SectionTitle>Kulüplerimiz</SectionTitle>
 
       <article className="wrapper">

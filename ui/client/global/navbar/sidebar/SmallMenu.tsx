@@ -36,19 +36,19 @@ function SmallMenu({ isOpen, setIsOpen }: SmallMenuProps) {
             onClick={() => {
               setIsOpen(!isOpen);
             }}
-            className={`in-ease-out flex max-w-[150px]  items-center justify-center rounded-full bg-red-700	 p-3  transition-all duration-300 active:bg-red-800 md:w-full md:gap-2 md:py-3 ${
-              isOpen ? ' bg-white' : ''
+            className={`in-ease-out flex max-w-[150px]  items-center justify-center rounded-full bg-primary-3	 p-3  transition-all duration-300 active:bg-red-800 md:w-full md:gap-2 md:py-3 ${
+              isOpen ? ' bg-primary-3' : ''
             }`}
           >
-            <IconContext.Provider value={{ color: 'white' }}>
-              <div
-                className={`in-ease-out duration-300  ${
-                  isOpen ? 'rotate-0 opacity-100' : 'rotate-180 opacity-0'
-                }`}
-              >
-                <AiOutlineClose size={24} />
-              </div>
-            </IconContext.Provider>
+            <div
+              className={`in-ease-out duration-300  ${
+                isOpen ? 'rotate-0 opacity-100 ' : 'rotate-180 opacity-0 '
+              }`}
+            >
+              <IconContext.Provider value={{ color: '' }}>
+                <AiOutlineClose size={24} fill="white" />
+              </IconContext.Provider>
+            </div>
           </button>
         </div>
       </div>

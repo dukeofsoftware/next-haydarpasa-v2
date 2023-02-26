@@ -10,7 +10,9 @@ const FotoItem = ({ src, alt, title }: FotoItemProps) => {
       <div className="relative h-[88%] w-full">
         <Image src={src} alt={alt} fill />
       </div>
-      <p className=" text-relaxed pt-1  pl-1 text-base">{title}</p>
+      <p className=" text-relaxed pt-1  pl-1 text-sm sm:text-base ">
+        {title}
+      </p>
     </div>
   );
 };
