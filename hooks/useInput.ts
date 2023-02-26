@@ -10,7 +10,7 @@ export const useInput = (initialValue = '') => {
     ) => {
       setValue(event.target.value);
     },
-    [value],
+    [setValue],
   );
   const reset = () => {
     setValue(initialValue);
