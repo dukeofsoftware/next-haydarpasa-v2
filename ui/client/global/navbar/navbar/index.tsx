@@ -5,12 +5,14 @@ import Haberler from '../haberler';
 import NavbarLogos from './NavbarLogos';
 import NavbarButton from './NavbarButton';
 import Sidebar from '@/ui/client/global/navbar/sidebar/Sidebar';
+import { usePathname } from 'next/navigation';
 
-interface NavProps {
-  setIsOpen: (isOpen: boolean) => void;
-  isOpen: boolean;
-}
-function Navbar({ isOpen, setIsOpen }: NavProps) {
+
+
+function Navbar() {
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
   const [posts, setPosts] = useState([]);
   const getPosts = async () => {
     await fetch(`/api/posts`, {
@@ -28,10 +30,24 @@ function Navbar({ isOpen, setIsOpen }: NavProps) {
   useEffect(() => {
     getPosts();
   }, []);
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+  useEffect(()=>{
+    if(isOpen){
+      document.body.style.overflow = 'hidden';
+    }else{
+      document.body.style.overflow = 'unset';
+    }
+
+  },[isOpen])
   return (
     <>
       <div>
-        <div className=" absolute z-30 flex max-h-[90px] w-full items-center justify-between  px-[4%] py-4 lg:px-[7%]">
+        <div
+          className={`${pathname === '/' ? 'absolute' : 'mb-6'
+            } absolute z-30 flex max-h-[90px] w-full items-center justify-between  px-[4%] py-4 lg:px-[7%]`}
+        >
           <NavbarLogos isOpen={isOpen} />
           <NavbarButton isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
