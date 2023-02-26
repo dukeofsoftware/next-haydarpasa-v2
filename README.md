@@ -40,7 +40,7 @@ Demoya gif veya bağlantı ekleyin
 | primary-4 | ![#BB8378](https://via.placeholder.com/10/BB8378?text=+) #BB8378 |
 | primary-5 | ![#70070c](https://via.placeholder.com/10/70070c?text=+) #70070c |
 | primary-6 | ![#FF8198](https://via.placeholder.com/10/FF8198?text=+) #FF8198 |
-| primary-6 | ![#FFB7C5](https://via.placeholder.com/10/FFB7C5?text=+) #FFB7C5 |
+| primary-7 | ![#FFB7C5](https://via.placeholder.com/10/FFB7C5?text=+) #FFB7C5 |
 
 ## Ortam Değişkenleri
 
