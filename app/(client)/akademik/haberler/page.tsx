@@ -9,15 +9,16 @@ async function page() {
     <section className="flex flex-col gap-1 px-[3%] pt-12 sm:px-[4%] md:px-[5%] lg:px-[6%] xl:px-[10%] 2xl:px-[12%]">
       <SectionTitle>Haberler Arşivi</SectionTitle>
 
-      {posts.map((post: Post) => (
-        <Haber
-          key={post.id}
-          content={post.content}
-          title={post.title}
-          imageURL={post.imageURL}
-          id={post.id}
-        />
-      ))}
+      {posts &&
+        posts.map((post: Post) => (
+          <Haber
+            key={post.id}
+            content={post.content}
+            title={post.title}
+            imageURL={post.imageURL}
+            id={post.id}
+          />
+        ))}
     </section>
   );
 }
