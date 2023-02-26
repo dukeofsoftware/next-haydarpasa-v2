@@ -11,6 +11,7 @@
       "@/constants/*": ["constants/*"],
       "@/types/*": ["types/*"],
       "@/utils/*": ["utils/*"],
+      "@/hooks/*": ["hooks/*"],
       
     },
     "target": "es5",

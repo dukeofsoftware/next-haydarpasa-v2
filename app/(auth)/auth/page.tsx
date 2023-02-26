@@ -5,7 +5,7 @@ import Label from '@/ui/global/form_elements/Label';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { SyntheticEvent } from 'react';
-function page() {
+function Page() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
@@ -84,4 +84,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
