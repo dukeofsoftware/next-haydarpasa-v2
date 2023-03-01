@@ -1,19 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
+import {memo} from "react"
 import { logolar } from '@/constants/okul_logoları';
-interface NavbarLogosProps {
-  isOpen: boolean;
-}
 
-const NavbarLogos = ({ isOpen }: NavbarLogosProps) => {
+const NavbarLogos = () => {
+  console.log("render  navbar logos")
   return (
     <>
-      <Link
+      <Link 
         href="/"
-        className={`${
-          isOpen ? 'invisible ' : 'visible'
-        } max-w relative block h-[80px] w-[80px] flex-none md:hidden`}
+        className={` max-w relative block h-[60px] w-[60px] flex-none md:hidden`}
       >
         <Image src={logolar.okulLogoTrans} alt="okul logosu" />
       </Link>
@@ -27,4 +23,4 @@ const NavbarLogos = ({ isOpen }: NavbarLogosProps) => {
   );
 };
 
-export default NavbarLogos;
+export default memo(NavbarLogos);
