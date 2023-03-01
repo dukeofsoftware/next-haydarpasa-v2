@@ -5,7 +5,7 @@ interface İdariProps {
   idare: {
     isim: string;
     unvan: string;
-    resim: string;
+    resim: string | StaticImageData;
     yazilar: string[];
   };
 }
