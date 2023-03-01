@@ -5,10 +5,10 @@ interface ListElementProps {
 
 const ListElement = ({ index, title }: ListElementProps) => {
   return (
-    <li className="before list-none	py-3">
-      <p className="text-lg">
-        <span className="md:text-extrabold text-[1.4rem] text-primary-3 md:text-[1.425rem]">
-          {index})
+    <li className="list-none	py-3">
+      <p className=" text-[0.7rem] xs:text-sm sm:text-base md:text-lg">
+        <span className="md:text-extrabold text-[0.7rem] xs:text-sm sm:text-base md:text-lg text-primary-3 ">
+          {index +1})
         </span>{' '}
         {title}
       </p>
