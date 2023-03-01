@@ -5,7 +5,7 @@ interface FotografCompProps {
 }
 const FotografComp = ({ src, alt }: FotografCompProps) => {
   return (
-    <div className="relative h-[500px] w-full p-2 lg:w-[700px]">
+    <div className="relative ratio aspect-video	  md:h-[500px] w-full p-2 lg:w-[700px]">
       <Image src={src} alt={alt} fill />
     </div>
   );
