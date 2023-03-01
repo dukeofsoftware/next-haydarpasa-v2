@@ -40,13 +40,16 @@ function Navbar() {
   }, [isOpen]);
   return (
     <>
-      <ContainerComp  classNames={`${pathname === '/' ? '' : 'mb-6'} w-full fixed top-0 z-30 flex max-h-[90px]  items-center   py-4 `}>
-        <NavbarLogos  />
-          <NavbarButton isOpen={isOpen} setIsOpen={setIsOpen} />
-
+      <ContainerComp
+        classNames={`${
+          pathname === '/' ? '' : 'mb-6'
+        } w-full fixed top-0 z-30 flex max-h-[90px]  items-center   py-4 `}
+      >
+        <NavbarLogos />
+        <NavbarButton isOpen={isOpen} setIsOpen={setIsOpen} />
       </ContainerComp>
       {isOpen && (
-        <div className="sticky top-0 left-0 h-full z-40 bg-black/90 backdrop-blur-md w-full">
+        <div className="sticky top-0 left-0 z-40 h-full w-full bg-black/90 backdrop-blur-md">
           <Haberler posts={posts} />
           <Sidebar setIsOpen={setIsOpen} />
         </div>

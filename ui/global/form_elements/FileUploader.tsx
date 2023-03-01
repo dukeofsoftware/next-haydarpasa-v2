@@ -8,19 +8,13 @@ const FileUploader = () => {
   const [selectedFile, setSelectedFile] = useState<File>();
 
   const handleUpload = async () => {
-    console.log(selectedFile, selectedImage);
-
     setUploading(true);
     try {
       if (!selectedFile) return;
       const formData = new FormData();
       formData.append('myImage', selectedFile);
       const { data } = await axios.post('/api/image', formData);
-      console.log(data);
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
 
     setUploading(false);
   };
@@ -41,7 +35,6 @@ const FileUploader = () => {
                 const file = target.files[0];
                 setSelectedFile(file);
                 setSelectedImage(URL.createObjectURL(file));
-                console.log(selectedFile, selectedImage);
               }
             }}
           >

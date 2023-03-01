@@ -32,13 +32,10 @@ const readFile = (
 };
 
 const handler: NextApiHandler = async (req, res) => {
-  console.log('req.method', req.method);
   if (req.method === 'GET') {
     res.status(200).json({ message: 'ok' });
   }
   if (req.method === 'POST') {
-    console.log('req.body', req.body);
-
     try {
       await fs.readdir(path.join(process.cwd() + '/public', '/uploads'));
     } catch (error) {

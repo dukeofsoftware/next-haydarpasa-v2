@@ -7,7 +7,6 @@ interface NavbarButtonProps {
   setIsOpen: (isOpen: boolean) => void;
 }
 const NavbarButton = ({ isOpen, setIsOpen }: NavbarButtonProps) => {
-  console.log("render oldum navbarButton")
   return (
     <div className=" ml-auto flex h-full w-full   items-center justify-end ">
       <button

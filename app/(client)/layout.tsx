@@ -57,7 +57,7 @@ export default function RootLayout({ children }: IProps) {
         className={`  min-h-screen 
           `}
       >
-        <Navbar/>
+        <Navbar />
         {children}
         <Footer />
       </body>

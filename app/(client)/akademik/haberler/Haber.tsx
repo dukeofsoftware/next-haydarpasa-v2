@@ -48,7 +48,7 @@ function Haber({ id, title, content, imageURL }: Post) {
           </Link>
         </div>
       </div>
-      <div className="w-fll mx-auto hidden sm:min-w-[400px] flex-col gap-3 py-3 px-2 sm:flex-row md:flex  lg:gap-3 ">
+      <div className="w-fll mx-auto hidden flex-col gap-3 py-3 px-2 sm:min-w-[400px] sm:flex-row md:flex  lg:gap-3 ">
         {/* Resim */}
         <div className="max-w-screen relative  h-[170px] w-full max-w-[400px] sm:h-[185px] sm:w-1/3 md:max-w-none lg:h-[210px] xl:h-[240px] ">
           <Image src={imageURL} alt={title} fill />

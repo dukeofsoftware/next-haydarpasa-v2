@@ -4,7 +4,6 @@ import {memo} from "react"
 import { logolar } from '@/constants/okul_logoları';
 
 const NavbarLogos = () => {
-  console.log("render  navbar logos")
   return (
     <>
       <Link 
