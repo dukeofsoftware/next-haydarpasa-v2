@@ -54,10 +54,10 @@ export default function RootLayout({ children }: IProps) {
     <html lang="tr">
       <head></head>
       <body
-        className={`  max-w-screen } min-h-screen 
-          overflow-x-hidden`}
+        className={`  min-h-screen 
+          `}
       >
-        <Navbar />
+        <Navbar/>
         {children}
         <Footer />
       </body>
