@@ -5,7 +5,7 @@ import ContainerComp  from '@/ui/global/Container';
 function page() {
   return (
     
-      <ContainerComp classNames="bg-red-900 	  flex flex-col items-center justify-center gap-9 z-20">
+      <ContainerComp classNames="bg-red-900 	  flex flex-col items-center justify-center gap-9">
          {hakkindaSection.map((item) => (
           <HakkindaSection key={item.title} title={item.title} images={item.images} content={item.content}/>
          ))}
