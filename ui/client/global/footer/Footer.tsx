@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="relative flex w-full  flex-col items-center justify-center gap-10 bg-red-900   px-[3%] text-white sm:px-[4%] md:flex-row md:items-start md:justify-center md:px-[5%] lg:px-[6%] xl:px-[7%] ">
       {/* Okul logo */}
 
-      <div className=" bottom-0 flex w-full min-w-[300px] flex-col items-center justify-center gap-4 md:w-auto">
+      <div className=" bottom-0 flex w-full sm:min-w-[300px] flex-col items-center justify-center gap-4 md:w-auto">
         <FooterLogo src={footer.FOOTER_LOGO} alt={footer.FOOTER_ALT} />
         {/* Sosyal medya */}
         <div className="flex flex-none flex-col gap-4   ">
