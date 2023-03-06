@@ -19,19 +19,17 @@ const NavbarButton = ({ isOpen, setIsOpen }: NavbarButtonProps) => {
           Menu
         </h1>
         <div
-          className={`z-30 relative h-[26px] w-[26px] duration-300  ${isOpen ? '  rotate-180  ' : 'rotate-0 opacity-100'
-            }`}
+          className={`relative z-30 h-[26px] w-[26px] duration-300  ${
+            isOpen ? '  rotate-180  ' : 'rotate-0 opacity-100'
+          }`}
         >
-          {isOpen ?
-          <IconContext.Provider value={{color:"white"}}>
-            <AiOutlineClose size={24} />
-
-          </IconContext.Provider>
-
-            :
+          {isOpen ? (
+            <IconContext.Provider value={{ color: 'white' }}>
+              <AiOutlineClose size={24} />
+            </IconContext.Provider>
+          ) : (
             <Image src={menu} alt="Menu aç" fill />
-
-          }
+          )}
         </div>
       </button>
     </div>

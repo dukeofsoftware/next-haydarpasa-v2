@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {memo} from "react"
+import { memo } from 'react';
 import { logolar } from '@/constants/okul_logoları';
 
 const NavbarLogos = () => {
   return (
     <>
-      <Link 
+      <Link
         href="/"
         className={` max-w relative block h-[60px] w-[60px] flex-none md:hidden`}
       >
