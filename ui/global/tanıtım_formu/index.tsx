@@ -1,5 +1,9 @@
 'use client';
-import { useState, ChangeEvent, SyntheticEvent, useCallback, memo } from 'react';
+import {
+  useState,
+  SyntheticEvent,
+  useCallback,
+} from 'react';
 import Loading from '@/ui/global/loading';
 import Input from '@/ui/global/form_elements/Input';
 import Label from '@/ui/global/form_elements/Label';
@@ -7,65 +11,64 @@ import ContainerComp from '@/ui/global/Container';
 import { useInput } from 'hooks/useInput';
 
 function TanıtımFormu() {
-
   const [isLoading, setIsLoading] = useState(false);
   const [check, setCheck] = useState(false);
   const [error, setError] = useState(false);
-  const tamAd = useInput("")
-  const mail = useInput("")
-  const telefon = useInput("")
-  const mesaj = useInput("")
+  const tamAd = useInput('');
+  const mail = useInput('');
+  const telefon = useInput('');
+  const mesaj = useInput('');
 
-
-
-  const sendForm = useCallback(async (e: SyntheticEvent) => {
-    e.preventDefault();
-    setCheck(false);
-    setIsLoading(true);
-    const state = {
-      tamAd: tamAd.value,
-      mail: mail.value,
-      telefon: telefon.value,
-      mesaj: mesaj.value,
-    }
-    await fetch('/api/tanitim', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(state),
-    }).catch(() => {
-      setIsLoading(false);
+  const sendForm = useCallback(
+    async (e: SyntheticEvent) => {
+      e.preventDefault();
       setCheck(false);
-      setError(true);
-    });
-    tamAd.reset()
-    mail.reset()
-    telefon.reset()
-    mesaj.reset()
+      setIsLoading(true);
+      const state = {
+        tamAd: tamAd.value,
+        mail: mail.value,
+        telefon: telefon.value,
+        mesaj: mesaj.value,
+      };
+      await fetch('/api/tanitim', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(state),
+      }).catch(() => {
+        setIsLoading(false);
+        setCheck(false);
+        setError(true);
+      });
+      tamAd.reset();
+      mail.reset();
+      telefon.reset();
+      mesaj.reset();
 
-    setIsLoading(false);
-    setCheck(true);
-  }, [tamAd.value, mail.value, telefon.value, mesaj.value]);
+      setIsLoading(false);
+      setCheck(true);
+    },
+    [tamAd, mail, telefon, mesaj],
+  );
 
   return (
     <ContainerComp classNames="my-[5rem]">
-      <pre>{`${tamAd.value} ${mail.value} ${telefon.value} ${mesaj.value}`}</pre>
-      <h1 className="mb-5 text-xl font-bold text-primary-3">
+      <h2 className="mb-5 text-xl font-bold text-primary-3">
         Tanıtım Başvurusu
-      </h1>
+      </h2>
       {isLoading && <Loading />}
       {!error && check && (
-        <h1 className="text-lg font-bold text-blue-600">
+        <p className="text-lg font-bold text-blue-600">
           Form başarıyla gönderildi!
-        </h1>
+        </p>
       )}
-      {error && <h1 className="text-xl text-red-600">Bir hata oluştu...</h1>}
+      {error && <p className="text-xl text-red-600">Bir hata oluştu...</p>}
       {!isLoading && (
         <form onSubmit={sendForm}>
           <div className="mb-6 grid gap-6 md:grid-cols-2">
             <div>
-              <Label htmlFor="tamAd">Tam Ad</Label>
+              <Label htmlFor="tamAd">Tam Ad*</Label>
               <Input
                 name="tamAd"
                 id="tamAd"
@@ -77,7 +80,7 @@ function TanıtımFormu() {
               />
             </div>
             <div className="mb-2">
-              <Label htmlFor="mail">Email</Label>
+              <Label htmlFor="mail">Email*</Label>
               <Input
                 name="mail"
                 id="mail"
@@ -90,7 +93,7 @@ function TanıtımFormu() {
             </div>
 
             <div>
-              <Label htmlFor="phone">Telefon Numarası</Label>
+              <Label htmlFor="phone">Telefon Numarası*</Label>
               <Input
                 name="telefon"
                 id="phone"
@@ -116,8 +119,14 @@ function TanıtımFormu() {
 
           <button
             type="submit"
-            disabled={isLoading || tamAd.value.length == 0 || mail.value.length == 0 || telefon.value.length == 0 || error}
-            className="disabled:bg-red-100 disabled:cursor-not-allowed in-ease-out my-5 w-full rounded-lg bg-red-700 px-5 py-2.5 text-center text-sm font-bold text-white duration-500 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 active:scale-105 active:bg-red-800 sm:w-auto "
+            disabled={
+              isLoading ||
+              tamAd.value.length == 0 ||
+              mail.value.length == 0 ||
+              telefon.value.length == 0 ||
+              error
+            }
+            className="in-ease-out my-5 w-full rounded-lg bg-red-700 px-5 py-2.5 text-center text-sm font-bold text-white duration-500 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 active:scale-105 active:bg-red-800 disabled:cursor-not-allowed disabled:bg-red-100 sm:w-auto "
           >
             Gönder
           </button>

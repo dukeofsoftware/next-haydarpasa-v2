@@ -4,7 +4,7 @@ import SidebarLink from './SidebarLink';
 
 const Sidebar = () => {
   return (
-    <aside className="l-0  sticky t-0 h-screen w-[16vw] flex-none border-r-2">
+    <aside className="l-0  t-0 sticky h-screen w-[16vw] flex-none border-r-2">
       {sidebarLinks.map((link) => (
         <SidebarLink
           href={link.href}

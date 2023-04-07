@@ -8,7 +8,7 @@ async function page() {
     post.updatedAt = post.updatedAt.toISOString();
   });
 
-  return <Posts posts={posts} data-superjson/> 
+  return <Posts posts={posts} data-superjson />;
 }
 
 export default page;

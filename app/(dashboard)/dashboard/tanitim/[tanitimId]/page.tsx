@@ -5,7 +5,7 @@ async function page({ params }: any) {
   tanitim.createdAt = tanitim.createdAt.toISOString();
   tanitim.createdAt = tanitim.createdAt.toISOString();
 
-  return <Tanitim tanitim={tanitim} data-superjson/>;
+  return <Tanitim tanitim={tanitim} data-superjson />;
 }
 export const revalidate = 5;
 export default page;

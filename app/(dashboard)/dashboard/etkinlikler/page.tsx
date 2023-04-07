@@ -26,14 +26,6 @@ async function page() {
     post.createdAt = post.createdAt.toISOString();
     post.updatedAt = post.updatedAt.toISOString();
   });
-  return (
-
-    <Events events={events}
-      data-superjson
-    />
-
-
-
-  );
+  return <Events events={events} data-superjson />;
 }
 export default page;

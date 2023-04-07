@@ -26,9 +26,9 @@ function KesfetLink({ name, href, icon, active, isActive }: KesfetLinkProps) {
       >
         {icon}
       </IconContext.Provider>
-      <h1 className="text-lg font-bold uppercase tracking-wider text-inherit">
+      <h2 className="text-lg font-bold uppercase tracking-wider text-inherit">
         {name}
-      </h1>
+      </h2>
     </Link>
   );
 }

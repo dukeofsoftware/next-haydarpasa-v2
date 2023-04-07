@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Landing = () => {
   return (
     <section className="relative h-[80vw] max-h-[95vh] min-h-[69vh] w-full pt-[5rem] sm:h-[70vw] sm:min-h-[59vh]   ">
-      <div className="z-20 mx-auto flex h-full max-w-screen-xl flex-col items-center justify-center px-4 text-center lg:py-16 lg:px-12">
+      <div className=" mx-auto flex h-full max-w-screen-xl flex-col items-center justify-center px-4 text-center lg:py-16 lg:px-12">
         <LandingTitle>Biz öğrencileri geliştiriyoruz.</LandingTitle>
         <LandingBody>
           Haydarpaşa Lisesi&apos;nde biz kişisel gelişime, akademik başarıya ve

@@ -5,7 +5,7 @@ interface İdariProps {
   idare: {
     isim: string;
     unvan: string;
-    resim: string;
+    resim: string | StaticImageData;
     yazilar: string[];
   };
 }
@@ -24,10 +24,10 @@ function İdari({ idare }: İdariProps) {
                 fill
               />
             </div>
-            <h1 className="mb-5 text-4xl font-bold tracking-tight md:mb-12 md:text-5xl xl:text-6xl">
+            <h2 className="mb-5 text-4xl font-bold tracking-tight md:mb-12 md:text-5xl xl:text-6xl">
               {idare.isim} <br />
               <span className="text-primary-3">{idare.unvan}</span>
-            </h1>
+            </h2>
 
             <HeroBody>{idare.yazilar}</HeroBody>
           </div>

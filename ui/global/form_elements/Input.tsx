@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo } from 'react';
 
 interface InputProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -23,8 +23,6 @@ const Input = ({
   id,
   type = 'text',
 }: InputProps) => {
-
-  
   return (
     <input
       onChange={onChange}

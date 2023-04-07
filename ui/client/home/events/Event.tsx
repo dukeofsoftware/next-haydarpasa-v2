@@ -29,9 +29,7 @@ function Event({ event }: EventProps) {
         </div>
         <div className=" flex w-full flex-col">
           <div className=" flex flex-row justify-around divide-x-2 bg-primary-1  p-4 font-bold uppercase leading-none text-white   md:divide-x-0">
-            <div className=" flex w-1/4 items-center justify-center">
-              {yıl}
-            </div>
+            <div className=" flex w-1/4 items-center justify-center">{yıl}</div>
 
             <div className="flex w-1/4 items-center justify-center px-1 md:text-2xl">
               {ay}
@@ -43,7 +41,7 @@ function Event({ event }: EventProps) {
               {saat}
             </div>
           </div>
-          <div className="  min-h-[150px] p-2 font-normal text-gray-800 md:p-4 flex flex-col">
+          <div className="  flex min-h-[150px] flex-col p-2 font-normal text-gray-800 md:p-4">
             <h1 className="  text-primary mb-4  text-xl font-bold leading-none tracking-tight">
               {event.title}
             </h1>

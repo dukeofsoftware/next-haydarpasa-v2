@@ -48,17 +48,17 @@ function Haber({ id, title, content, imageURL }: Post) {
           </Link>
         </div>
       </div>
-      <div className="w-fll mx-auto hidden min-w-[400px] flex-col gap-3 py-3 px-2 sm:flex-row md:flex  lg:gap-3 ">
+      <div className="w-fll mx-auto hidden flex-col gap-3 py-3 px-2 sm:min-w-[400px] sm:flex-row md:flex  lg:gap-3 ">
         {/* Resim */}
-        <div className="min-w-screen relative  h-[170px] w-full max-w-[400px] sm:h-[185px] sm:w-1/3 md:max-w-none lg:h-[210px] xl:h-[240px] ">
+        <div className="max-w-screen relative  h-[170px] w-full max-w-[400px] sm:h-[185px] sm:w-1/3 md:max-w-none lg:h-[210px] xl:h-[240px] ">
           <Image src={imageURL} alt={title} fill />
         </div>
         {/* Content */}
         <div className=" flex   h-[170px] flex-col justify-between gap-1 py-1 sm:h-[185px] sm:w-2/3 lg:h-[210px] xl:h-[240px]">
           <div>
-            <h1 className="text-primary text-lg font-bold uppercase lg:text-2xl lg:font-extrabold">
+            <h2 className="text-primary text-lg font-bold uppercase lg:text-2xl lg:font-extrabold">
               {title}{' '}
-            </h1>
+            </h2>
             <p className="overflow-hidden text-ellipsis text-sm leading-relaxed text-gray-700 line-clamp-6 first-letter:uppercase lg:text-lg">
               {content}
             </p>

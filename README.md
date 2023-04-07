@@ -20,15 +20,11 @@ Bu projenin amacı Haydarpaşa Lisesi'nin öğrenecilerinin yeni olaylardan ve e
 
 ## Çıkarılan Dersler
 
-Typescript, Prisma, Next-Auth, Framer-Motion, Chart.js, Next.js kullanmayı öğrendim. Ayrıca tasarım bilgimi geliştirdim. Responsive layoutlar oluşturdum. TailwindCSS'i özelleştirmeyi ve proje deploy etmeyi öğrendim.
+Typescript, Prisma, Next-Auth, Framer-Motion, Chart.js kullanmayı öğrendim. React ve Next.js bilgimi geliştirdim. Ayrıca tasarım bilgimi geliştirdim. Responsive layoutlar oluşturdum. TailwindCSS'i özelleştirmeyi ve proje deploy etmeyi öğrendim.
 
 ## Proje Linki
 
-Demoya gif veya bağlantı ekleyin
-
-## Ekran Görüntüleri
-
-![Uygulama Ekran Görüntüsü](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+- [link](https://haydarpasa-site-4s1fu33hi-dukeofsoftware.vercel.app/)
 
 ## Renk Referansı
 
@@ -40,7 +36,7 @@ Demoya gif veya bağlantı ekleyin
 | primary-4 | ![#BB8378](https://via.placeholder.com/10/BB8378?text=+) #BB8378 |
 | primary-5 | ![#70070c](https://via.placeholder.com/10/70070c?text=+) #70070c |
 | primary-6 | ![#FF8198](https://via.placeholder.com/10/FF8198?text=+) #FF8198 |
-| primary-6 | ![#FFB7C5](https://via.placeholder.com/10/FFB7C5?text=+) #FFB7C5 |
+| primary-7 | ![#FFB7C5](https://via.placeholder.com/10/FFB7C5?text=+) #FFB7C5 |
 
 ## Ortam Değişkenleri
 
@@ -84,7 +80,7 @@ Sunucuyu çalıştırın
 
 ## Optimizasyon
 
-Kodunuzda hangi optimizasyonları yaptınız? Örneğin. yeniden düzenleyiciler, performans iyileştirmeleri, erişilebilirlik
+- Performans iyileştirmeleri yapmaya ve optimize etmeye çalıştım.
 
 ## Geri Bildirim
 
@@ -92,7 +88,7 @@ Herhangi bir geri bildiriminiz varsa, lütfen dukeofsoftware@gmail.com adresinde
 
 ## Kullananlar
 
-Bu proje aşağıdaki kurum tarafından kullanılmaktadır:
+Bu proje aşağıdaki kurum tarafından kullanılacaktır:
 
 - Haydarpaşa Lisesi
 
