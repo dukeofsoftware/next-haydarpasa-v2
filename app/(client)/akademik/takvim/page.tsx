@@ -16,7 +16,7 @@ async function page() {
           <Event key={event.id} event={event} />
         ))
       ) : (
-        <h1>Etkinlik bulunamadı...</h1>
+        <h3>Etkinlik bulunamadı...</h3>
       )}
     </ContainerComp>
   );

@@ -12,7 +12,7 @@ const Footer = () => {
         {/* Sosyal medya */}
         <div className="flex flex-none flex-col gap-4   ">
           <div>
-            <h1 className="text-xl font-bold">Haydarpaşa&apos;yı takip et</h1>
+            <h3 className="text-xl font-bold">Haydarpaşa&apos;yı takip et</h3>
           </div>
           <div className="flex flex-wrap justify-center gap-4 md:flex-nowrap">
             {socialLinks.map((item) => (
@@ -31,18 +31,18 @@ const Footer = () => {
       {/* Lokasyon */}
       <div className=" flex w-full flex-col flex-wrap justify-center gap-3 py-6 md:flex-row  lg:gap-[53px] lg:py-[40px]">
         <div className="justfy-center flex w-full flex-col gap-2 md:max-w-[200px]">
-          <h1 className="text-xl font-bold ">Telefon</h1>
+          <h4 className="text-xl font-bold ">Telefon</h4>
           <p className="mb-6 text-lg font-bold">
             <a href={footer.TEL_LINK}>{footer.TEL}</a>
           </p>
 
-          <h1 className="text-xl font-bold">Adres</h1>
+          <h4 className="text-xl font-bold">Adres</h4>
           <address className="w-full text-lg font-bold underline">
             <a href={footer.ADRES_LINK}>{footer.ADRES}</a>
           </address>
         </div>
         <div className=" flex w-full flex-none flex-col gap-4 md:max-w-[200px]">
-          <h1 className="text-xl font-bold">Ulaşım</h1>
+          <h4 className="text-xl font-bold">Ulaşım</h4>
           <p
             className=" leading-relaxed
 "

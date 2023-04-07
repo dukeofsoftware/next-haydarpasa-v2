@@ -43,7 +43,7 @@ function EditEvent({ event, changeLoading }: EditEventProps) {
 
   return (
     <section className="flex flex-col ">
-      <h1 className="my-4 text-center text-2xl text-primary-3">Düzenle</h1>
+      <h3 className="my-4 text-center text-2xl text-primary-3">Düzenle</h3>
       <form onSubmit={(e) => editEvent(e)} className="mb-6 grid gap-6 ">
         <div>
           <label

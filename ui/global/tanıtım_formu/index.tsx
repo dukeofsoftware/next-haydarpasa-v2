@@ -1,10 +1,8 @@
 'use client';
 import {
   useState,
-  ChangeEvent,
   SyntheticEvent,
   useCallback,
-  memo,
 } from 'react';
 import Loading from '@/ui/global/loading';
 import Input from '@/ui/global/form_elements/Input';
@@ -56,16 +54,16 @@ function TanıtımFormu() {
 
   return (
     <ContainerComp classNames="my-[5rem]">
-      <h1 className="mb-5 text-xl font-bold text-primary-3">
+      <h2 className="mb-5 text-xl font-bold text-primary-3">
         Tanıtım Başvurusu
-      </h1>
+      </h2>
       {isLoading && <Loading />}
       {!error && check && (
-        <h1 className="text-lg font-bold text-blue-600">
+        <p className="text-lg font-bold text-blue-600">
           Form başarıyla gönderildi!
-        </h1>
+        </p>
       )}
-      {error && <h1 className="text-xl text-red-600">Bir hata oluştu...</h1>}
+      {error && <p className="text-xl text-red-600">Bir hata oluştu...</p>}
       {!isLoading && (
         <form onSubmit={sendForm}>
           <div className="mb-6 grid gap-6 md:grid-cols-2">

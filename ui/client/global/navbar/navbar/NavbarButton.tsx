@@ -15,9 +15,9 @@ const NavbarButton = ({ isOpen, setIsOpen }: NavbarButtonProps) => {
         }}
         className=" in-ease-out flex max-w-[150px] items-center justify-center rounded-full bg-red-700	 p-3  duration-500 hover:bg-red-800 active:bg-red-800 md:w-full md:gap-2 md:py-3 "
       >
-        <h1 className="text-md hidden font-extrabold uppercase text-white md:block">
+        <h3 className="text-md hidden font-extrabold uppercase text-white md:block">
           Menu
-        </h1>
+        </h3>
         <div
           className={`relative z-30 h-[26px] w-[26px] duration-300  ${
             isOpen ? '  rotate-180  ' : 'rotate-0 opacity-100'

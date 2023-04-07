@@ -56,9 +56,9 @@ function Haber({ id, title, content, imageURL }: Post) {
         {/* Content */}
         <div className=" flex   h-[170px] flex-col justify-between gap-1 py-1 sm:h-[185px] sm:w-2/3 lg:h-[210px] xl:h-[240px]">
           <div>
-            <h1 className="text-primary text-lg font-bold uppercase lg:text-2xl lg:font-extrabold">
+            <h2 className="text-primary text-lg font-bold uppercase lg:text-2xl lg:font-extrabold">
               {title}{' '}
-            </h1>
+            </h2>
             <p className="overflow-hidden text-ellipsis text-sm leading-relaxed text-gray-700 line-clamp-6 first-letter:uppercase lg:text-lg">
               {content}
             </p>

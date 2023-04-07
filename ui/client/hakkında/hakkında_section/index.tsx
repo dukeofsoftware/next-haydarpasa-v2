@@ -12,9 +12,9 @@ const HakkindaSection = ({ title, images, content }: HakkindaSectionProps) => {
     <section className="mt-[90px] flex min-h-[100px] w-full flex-col rounded-md bg-white xl:flex-row">
       <div className="w-full basis-2/3 px-2 py-5 md:px-6 ">
         {/* Başkık */}
-        <h1 className="text-primary  mb-4 text-center text-3xl font-bold ">
+        <h2 className="text-primary  mb-4 text-center text-3xl font-bold ">
           {title}
-        </h1>
+        </h2>
         {/* İçerik */}
         <p
           className="text-[14px] leading-relaxed md:text-[15px] lg:text-[17.5px]

@@ -17,12 +17,12 @@ const Hero = () => {
                 fill
               />
             </div>
-            <h1 className="mb-3 text-3xl font-bold tracking-tight sm:text-4xl md:mb-6 md:text-5xl xl:text-6xl">
+            <h2 className="mb-3 text-3xl font-bold tracking-tight sm:text-4xl md:mb-6 md:text-5xl xl:text-6xl">
               {heroConstants.HERO_TITLE} <br />
               <span className="text-primary-3">
                 {heroConstants.HERO_SUBTITLE}
               </span>
-            </h1>
+            </h2>
 
             <HeroBody>{heroConstants.HERO_BODY}</HeroBody>
             <div className="grid grid-cols-12 gap-3">
